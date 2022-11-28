@@ -14,7 +14,7 @@ function FooterInfoColumn(props) {
 
       {links.map((item, index) => {
         return (
-          <NavLink key={index} className='footer__info-link' to={`/${item}`}>
+          <NavLink key={index} className='footer__info-link link' to={`/${item.split(" ").join("_")}`}>
             {item}
           </NavLink>
         )
