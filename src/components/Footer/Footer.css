@@ -16,7 +16,6 @@
 
 .footer__container {
   max-height: 200px;
-  width: 711px;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@
   row-gap: 20px;
 }
 
-.footer__info-container{
+.footer__info-container {
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -42,7 +41,7 @@
 
 .footer__copyright-title {
   margin: 0;
-  
+
   font-weight: 300;
   font-size: 15px;
   line-height: 22px;
