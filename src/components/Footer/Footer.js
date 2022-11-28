@@ -22,6 +22,11 @@ function Footer() {
           />
 
           <FooterInfoColumn
+            title='Patrtner with us'
+            links={['Integrate our API', 'Become an Affiliate', 'Share your proposal', 'Start your career']}
+          />
+
+          <FooterInfoColumn
             title='Policies'
             links={['Terms of Service', 'Privacy Policy', 'Coockie Policy', 'AML Policy']}
           />
