@@ -1,0 +1,22 @@
+.header__navigation-link {
+  text-transform: capitalize;
+  color: #fff;
+  text-decoration: none;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.header__navigation-link_active {
+  font-weight: 600;
+  background: linear-gradient(
+    89.03deg,
+    #a7722e -0.18%,
+    #e6d39b 67.22%,
+    #debc67 84.79%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

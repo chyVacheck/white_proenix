@@ -1,0 +1,41 @@
+.header {
+  margin: 0;
+  min-height: 200px;
+  padding: 20px 100px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.header__logo {
+  width: 200px;
+  height: 70px;
+}
+
+.header__navigation {
+  margin: 7px 0 0;
+  height: 100%;
+  width: 365px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__email-button {
+  display: flex;
+  flex-direction: row-reverse;
+  min-width: 200px;
+}
+
+.header__email {
+  height: 24px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+.header__email-icon{
+  margin-left: 10px;
+}

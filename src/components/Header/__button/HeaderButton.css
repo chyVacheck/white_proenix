@@ -1,0 +1,21 @@
+.HeaderButton {
+  height: 35px;
+  width: 85px;
+  background: linear-gradient(
+    89.03deg,
+    #a7722e -0.18%,
+    #e6d39b 67.22%,
+    #debc67 84.79%
+  );
+  border-radius: 5px;
+
+  text-align: center;
+}
+
+.HeaderButton__text {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+}
