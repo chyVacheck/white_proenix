@@ -1,9 +1,10 @@
 
+import './Login.css';
 
 function Login() {
 
   return (
-    <article>
+    <article className='login'>
       Login
     </article>
   )
