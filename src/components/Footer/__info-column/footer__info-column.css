@@ -1,0 +1,27 @@
+.footer__info-column {
+  margin: 0;
+}
+
+.footer__info-title {
+  height: 23px;
+  margin-bottom: 10px;
+
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+
+  color: #fff;
+}
+
+.footer__info-link {
+  display: block;
+  height: 23px;
+  
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+
+  color: #585858;
+  text-decoration: none;
+  cursor: pointer;
+}
