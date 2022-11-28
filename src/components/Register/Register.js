@@ -1,9 +1,10 @@
 
+import './Register.css';
 
 function Register() {
 
   return (
-    <article>
+    <article className='register'>
       Register
     </article>
   )
