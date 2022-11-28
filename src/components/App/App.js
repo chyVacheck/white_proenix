@@ -2,53 +2,112 @@
 import './App.css';
 
 import { Routes, Navigate, Route } from 'react-router-dom';
-//? components
+//* компоненты
+//? основные
 import Header from '../Header/Header.js';
-import Main from '../Main/Main.js';
+import Home from '../Home/Home.js';
+import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
+import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
+//? компоненты из футера
+import HowItWorks from '../HowItWorks/HowItWorks';
+
+//? авторизация/регистрация
 import Register from '../Register/Register.js';
 import Login from '../Login/Login.js';
+//? хуки
+import { useState } from 'react';
 
 function App() {
+
+  const [isLogined, setIsLogined] = useState(true);
+  const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
+
+
+  function logOf() {
+    setIsLogined(false);
+    setCurrentEmail('');
+  }
+
   return (
     <div className="app">
-      {/*//? Шапка сайта, блок Header */}
-      <Header />
+
+      <Header
+        currentEmail={currentEmail}
+        isLogined={isLogined}
+        buttonLink='login'
+      />
 
       <Routes>
-        {/* основной контент */}
+        {/* основной контент {home} */}
         <Route
           exact
-          path="/"
+          path="/home"
           element={
             <>
               {/*//? основная часть сайта, блок main */}
-              <Main />
+              <Home
+                logOf={logOf}
+              />
             </>
           }>
         </Route>
 
-        {/* регистрация */}
+        {/* регистрация {register} */}
         <Route
-          path='/signup'
+          path='/register'
           element={
-            <Register />
+            <>
+              <Register />
+            </>
           }>
         </Route>
 
-        {/* авторизация */}
+        {/* авторизация {login} */}
         <Route
-          path='/signin'
+          path='/login'
           element={
-            <Login />
+            <>
+              <Login />
+            </>
           }>
         </Route>
 
-        {/* все остальное */}
+        {/* покупка и обмен {exhange_&_Buy} */}
+        <Route
+          path='/exchange_&_Buy'
+          element={
+            <>
+              <ExchangeBuy />
+            </>
+          }>
+        </Route>
+
+        {/* поодержка {Support} */}
+        <Route
+          path='/support'
+          element={
+            <>
+              <Support />
+            </>
+          }>
+        </Route>
+
+        {/* как это работает {How_it_works} */}
+        <Route
+          path='/how_it_works'
+          element={
+            <>
+              <HowItWorks />
+            </>
+          }>
+        </Route>
+
+        {/* все остальное {любой путь кроме выше описанных} */}
         <Route
           path="*"
           element={
-            <Navigate to="/" />
+            <Navigate to="/home" />
           }>
         </Route>
 
@@ -56,7 +115,7 @@ function App() {
 
       {/*//? подвал сайта, блок footer */}
       <Footer />
-    </div>
+    </div >
   );
 }
 
