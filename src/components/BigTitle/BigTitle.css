@@ -1,0 +1,28 @@
+.bigTitle {
+  z-index: 1;
+
+  width: fit-content;
+  margin: 0;
+  position: relative;
+  font-family: "Druk Wide Cyr";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 55px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.bigTitle::after {
+  z-index: -1;
+  filter: blur(1px);
+  content: "policies";
+  position: absolute;
+  color: #000 !important;
+  text-shadow: 2px 0 5px rgba(222, 188, 103, 1),
+    0 2px 5px rgba(230, 211, 155, 1), -2px 0 5px rgba(167, 114, 46, 1),
+    0 -2px 5px rgba(222, 188, 103, 1);
+  top: -3px;
+  left: 5px;
+}
