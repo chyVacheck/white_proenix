@@ -5,8 +5,8 @@ import './HeaderButton.css';
 function HeaderButton({ page, isLogined }) {
 
   const navigate = useNavigate();
-  const link = page === '/login' ? '/register' : '/login';
-  const text = page === '/login' ? 'sign up' : 'sign in';
+  const link = page === '/Login' ? '/Register' : '/Login';
+  const text = page === '/Login' ? 'sign up' : 'sign in';
 
   function onClick() {
     navigate(link);

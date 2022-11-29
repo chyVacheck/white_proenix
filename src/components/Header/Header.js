@@ -21,7 +21,7 @@ function Header({ currentEmail, isLogined = false }) {
   return (
     <header className='header'>
 
-      <NavLink to={`/home`}>
+      <NavLink to={`/Home`}>
         <img alt="White Proenix" className='header__logo' src={logo} />
       </NavLink>
 
@@ -29,17 +29,17 @@ function Header({ currentEmail, isLogined = false }) {
 
         <HeaderNavlink
           page={page}
-          text={'home'}
+          text={'Home'}
         />
 
         <HeaderNavlink
           page={page}
-          text={'exchange & Buy'}
+          text={'Exchange & Buy'}
         />
 
         <HeaderNavlink
           page={page}
-          text={'support'}
+          text={'Support'}
         />
       </nav>
 
