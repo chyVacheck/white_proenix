@@ -9,3 +9,7 @@
 @import url(./blocks/link/link.css);
 /* ? подключаем button */
 @import url(./blocks/button/button.css);
+
+#root {
+  height: 100vh;
+}
