@@ -1,5 +1,108 @@
 .register {
   color: #fff;
   min-height: 100px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.register__button-password {
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: 24px;
+  height: 22px;
+  position: absolute;
+  bottom: 16.23px;
+  right: 20px;
+
+  background-position-y: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.register__button-password_open {
+  background-image: url(./../../images/eyeOpen.svg);
+}
+
+.register__button-password_close {
+  background-image: url(./../../images/eyeClose.svg);
+}
+
+.register__form {
+  max-width: 365px;
+  margin: 40px 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register__fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 26.5px;
+  margin: 0 0 4.4px 0;
+}
+
+.register__password-message {
+  max-width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #585858;
+  margin: 0 0 17.3px 0;
+}
+
+.register__nav-submit {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__nav {
+  height: 23px;
+  width: fit-content;
+  color: rgba(245, 194, 73, 1);
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+}
+
+.register__create-account-link {
+  display: flex;
+  width: 365px;
+  justify-content: space-between;
+}
+
+.register__create-account-message {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+
+  color: #585858;
+}
+
+.register__checkbox-container {
+  margin: 0 0 41.11px;
+  display: flex;
+  flex-direction: row;
+}
+
+.register__input-checkbox {
+  background: #afafaf;
+  border-radius: 3.33123px;
+  width: 22.21px;
+  height: 22.21px;
+  margin: 0 8.8px 0 0;
+}
+
+.register__input-checkbox-message {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+  color: #afafaf;
 }
