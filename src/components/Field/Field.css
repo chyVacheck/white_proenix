@@ -1,0 +1,35 @@
+.field {
+  margin: 0;
+  position: relative;
+}
+
+.field__name {
+  margin: 0 0 3.65px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #afafaf;
+}
+
+.field__input {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  width: 363.1px;
+  height: 53.3px;
+  background: #282828;
+  border-radius: 13.325px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 14px 22px 14px 18px;
+  gap: 11.1px;
+  border: #282828 1px solid;
+}
+
+.field__input:focus-visible {
+  border: #fff 1px solid;
+  outline: none;
+  caret-color: #fff;
+}
