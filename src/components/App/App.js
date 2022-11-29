@@ -11,6 +11,7 @@ import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
 //? компоненты из футера
 import HowItWorks from '../HowItWorks/HowItWorks';
+import Policies from '../Policies/Policies';
 
 //? авторизация/регистрация
 import Register from '../Register/Register.js';
@@ -20,7 +21,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [isLogined, setIsLogined] = useState(true);
+  const [isLogined, setIsLogined] = useState(false);
   const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
 
 
@@ -93,6 +94,18 @@ function App() {
           }>
         </Route>
 
+        {/* //? из footer */}
+
+        {/* как это работает {Policies} */}
+        <Route
+          path='/policies'
+          element={
+            <>
+              <Policies />
+            </>
+          }>
+        </Route>
+
         {/* как это работает {How_it_works} */}
         <Route
           path='/how_it_works'
@@ -105,7 +118,8 @@ function App() {
 
         {/* все остальное {любой путь кроме выше описанных} */}
         <Route
-          path="*"
+          // todo не забыть включить обратно
+          path=""
           element={
             <Navigate to="/home" />
           }>
