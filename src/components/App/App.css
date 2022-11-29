@@ -1,7 +1,9 @@
 .app {
   margin-top: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
-  font-family: "Poppins"
+  font-family: "Poppins";
 }
