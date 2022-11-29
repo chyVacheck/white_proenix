@@ -1,11 +1,12 @@
 
 import './Login.css';
+import BigTitle from './../BigTitle/BigTitle.js';
 
 function Login() {
 
   return (
     <article className='login'>
-      Login
+      <BigTitle id='login'>login</BigTitle>
     </article>
   )
 }

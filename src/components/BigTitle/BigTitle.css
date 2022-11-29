@@ -17,7 +17,6 @@
 .bigTitle::after {
   z-index: -1;
   filter: blur(1px);
-  content: "policies";
   position: absolute;
   color: #000 !important;
   text-shadow: 2px 0 5px rgba(222, 188, 103, 1),
@@ -25,4 +24,52 @@
     0 -2px 5px rgba(222, 188, 103, 1);
   top: -3px;
   left: 5px;
+}
+
+#login.bigTitle::after {
+  content: "login";
+}
+
+#sign-in.bigTitle::after {
+  content: "sign in";
+}
+
+#home.bigTitle::after {
+  content: "home";
+}
+
+#register.bigTitle::after {
+  content: "register";
+}
+
+#storage-buying-and-selling-cryptocurrency.bigTitle::after {
+  content: "Storage, Buying and Selling Cryptocurrency";
+}
+
+#cryptocurrency-exchange.bigTitle::after {
+  content: "Cryptocurrency exchange";
+}
+
+#clients-about-us.bigTitle::after {
+  content: "Clients about us";
+}
+
+#mail-verification.bigTitle::after {
+  content: "mail verification";
+}
+
+#terms-of-service.bigTitle::after {
+  content: "Terms of Service";
+}
+
+#privacy-policy.bigTitle::after {
+  content: "Privacy Policy";
+}
+
+#cookie-policy.bigTitle::after {
+  content: "Cookie Policy";
+}
+
+#aml-policy.bigTitle::after {
+  content: "AML policy";
 }

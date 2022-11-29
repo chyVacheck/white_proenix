@@ -1,10 +1,10 @@
 
 import './BigTitle.css';
 
-function BigTitle({ children }) {
+function BigTitle({ children, id }) {
 
   return (
-    <h2 className='bigTitle'>
+    <h2 id={id} className='bigTitle'>
       {children}
     </h2>
   )
