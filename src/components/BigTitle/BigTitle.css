@@ -71,8 +71,8 @@
   content: "Privacy Policy";
 }
 
-#cookie-policy.bigTitle::after {
-  content: "Cookie Policy";
+#coockie-policy.bigTitle::after {
+  content: "Coockie Policy";
 }
 
 #aml-policy.bigTitle::after {

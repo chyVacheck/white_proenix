@@ -4,9 +4,9 @@ import './BigTitle.css';
 function BigTitle({ children, id }) {
 
   return (
-    <h2 id={id} className='bigTitle'>
+    <h1 id={id} className='bigTitle'>
       {children}
-    </h2>
+    </h1>
   )
 }
 
