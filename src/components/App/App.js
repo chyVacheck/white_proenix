@@ -18,13 +18,14 @@ import HowItWorks from '../HowItWorks/HowItWorks';
 import Register from '../Register/Register.js';
 import Login from '../Login/Login.js';
 
-//? поп-апы
+//? pop-up
 import PopupInfo from '../PopupInfo/PopupInfo';
 
 //* хуки
 import { useState } from 'react';
 
-import icons from './../../utils/constants.js';
+//? constants
+import { popupInfoContent } from './../../utils/constants.js';
 
 function App() {
 
@@ -33,11 +34,11 @@ function App() {
 
   //* State for PopupInfo
   const [isPopupInfoOpen, setIsPopupInfoOpen] = useState(true);
-  const [isPopupInfoMessage, setIsPopupInfoMessage] = useState('Please wait');
-  const [isPopupInfoImage, setIsPopupInfoImage] = useState(icons.waiting);
-  const [isPopupInfoAlt, setIsPopupInfoAlt] = useState('error');
+  const [isPopupInfoImage, setIsPopupInfoImage] = useState(popupInfoContent.images.icon.waiting);
+  const [isPopupInfoAlt, setIsPopupInfoAlt] = useState(popupInfoContent.images.alt.waiting);
+  const [isPopupInfoMessage, setIsPopupInfoMessage] = useState(popupInfoContent.message.waiting);
 
-
+  //? функция закрытия pop-up`ов
   function closePopup(state, setState) {
     setState(!state);
   }

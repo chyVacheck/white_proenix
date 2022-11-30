@@ -4,12 +4,24 @@ import imageWaiting from './../images/icons/waiting.svg';
 import imageError from './../images/icons/error.svg';
 
 
-const icons = {
-  complete: imageComplete,
-  waiting: imageWaiting,
-  error: imageError,
+const images = {
+  icon: {
+    complete: imageComplete,
+    waiting: imageWaiting,
+    error: imageError,
+  },
+  alt: {
+    complete: 'Complete',
+    waiting: 'Waiting',
+    error: 'Error',
+  }
 }
 
-
-
-export default icons;
+export const popupInfoContent = {
+  images: images,
+  message: {
+    complete: 'Complete',
+    waiting: 'Waiting',
+    error: 'Error',
+  }
+}
