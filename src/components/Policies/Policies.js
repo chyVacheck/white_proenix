@@ -7,7 +7,7 @@ function Policies() {
 
   return (
     <article className='policies'>
-      <BigTitle>
+      <BigTitle id='policies'>
         policies
       </BigTitle>
 

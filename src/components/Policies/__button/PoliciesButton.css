@@ -1,16 +1,18 @@
 .policies-button {
-  width: 400px;
-  height: 60px;
+  width: 363px;
+  height: 53px;
 
   color: #fff;
   background: #282828;
-  border-radius: 12px;
+  border-radius: 13.325px;
 
   text-align: center;
 
   font-weight: 500;
-  font-size: 25px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 24px;
+
+  border: none;
 
   display: flex;
   flex-direction: column;
@@ -22,7 +24,8 @@
 
 .policies-button-name {
   text-transform: capitalize;
-  height: 23px;
+  height: 24px;
   text-align: center;
   margin: 0;
 }
+
