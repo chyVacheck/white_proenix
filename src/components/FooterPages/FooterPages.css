@@ -1,0 +1,15 @@
+.footerPages {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 205px;
+}
+
+.footerPages__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  padding: 0 0 100px;
+}
