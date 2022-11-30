@@ -10,8 +10,10 @@ import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
 import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
 
-//? компоненты из футера
+//? компоненты из Footer
 import Policies from '../Policies/Policies';
+// компоненты из Policies
+import FooterPages from '../FooterPages/FooterPages';
 import HowItWorks from '../HowItWorks/HowItWorks';
 
 //? авторизация/регистрация
@@ -24,7 +26,7 @@ import PopupInfo from '../PopupInfo/PopupInfo';
 //* хуки
 import { useState } from 'react';
 
-//? constants
+//* constants
 import { popupInfoContent } from './../../utils/constants.js';
 
 function App() {
@@ -115,23 +117,19 @@ function App() {
         </Route>
 
         {/* //? из footer */}
-
-        {/* как это работает {Policies} */}
         <Route
-          path='/policies'
+          path='/:path/:path_second'
           element={
-            <>
-              <Policies />
-            </>
+            <FooterPages />
           }>
         </Route>
 
-        {/* как это работает {How_it_works} */}
+        {/* политика {Policies} */}
         <Route
-          path='/how_it_works'
+          path='/Policies'
           element={
             <>
-              <HowItWorks />
+              <Policies />
             </>
           }>
         </Route>
