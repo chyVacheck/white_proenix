@@ -1,0 +1,15 @@
+.paragrafs__paragrafs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.paragrafs__paragraf {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 110%;
+  margin: 0px;
+  text-align: justify;
+
+  color: #bfbfbf;
+}

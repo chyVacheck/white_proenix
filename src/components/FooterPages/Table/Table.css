@@ -1,0 +1,64 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 50px;
+}
+
+.table__colon-names {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 0 28px 0;
+  border-bottom: #afafaf 2px solid;
+}
+
+.table__colon-name {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 110%;
+
+  text-align: justify;
+  color: #bfbfbf;
+}
+
+.table__content {
+  width: 100%;
+  border-spacing: 0 !important;
+}
+
+.table__row {
+  margin: 0;
+}
+
+.table__cell {
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-bottom: solid 2px #afafaf;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 110%;
+
+  color: #bfbfbf;
+}
+
+.table__name {
+  width: 266px;
+}
+
+.table__type {
+  width: 137px;
+}
+
+.table__party {
+  width: 121px;
+}
+
+.table__target {
+  width: 350px;
+  text-align: justify;
+}
+
+.table__period {
+  text-align: center;
+}

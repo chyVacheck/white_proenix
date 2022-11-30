@@ -1,0 +1,22 @@
+.list-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  margin: 0;
+}
+
+.list__text {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 110%;
+  margin: 0px;
+  text-align: justify;
+
+  color: #bfbfbf;
+}
