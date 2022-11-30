@@ -9,20 +9,38 @@ import Home from '../Home/Home.js';
 import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
 import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
+
 //? компоненты из футера
-import HowItWorks from '../HowItWorks/HowItWorks';
 import Policies from '../Policies/Policies';
+import HowItWorks from '../HowItWorks/HowItWorks';
 
 //? авторизация/регистрация
 import Register from '../Register/Register.js';
 import Login from '../Login/Login.js';
-//? хуки
+
+//? поп-апы
+import PopupInfo from '../PopupInfo/PopupInfo';
+
+//* хуки
 import { useState } from 'react';
+
+import icons from './../../utils/constants.js';
 
 function App() {
 
   const [isLogined, setIsLogined] = useState(false);
   const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
+
+  //* State for PopupInfo
+  const [isPopupInfoOpen, setIsPopupInfoOpen] = useState(true);
+  const [isPopupInfoMessage, setIsPopupInfoMessage] = useState('Please wait');
+  const [isPopupInfoImage, setIsPopupInfoImage] = useState(icons.waiting);
+  const [isPopupInfoAlt, setIsPopupInfoAlt] = useState('error');
+
+
+  function closePopup(state, setState) {
+    setState(!state);
+  }
 
 
   function logOf() {
@@ -33,6 +51,7 @@ function App() {
   return (
     <div className="app">
 
+      {/*//? шапка сайта, блок header */}
       <Header
         currentEmail={currentEmail}
         isLogined={isLogined}
@@ -129,6 +148,16 @@ function App() {
 
       {/*//? подвал сайта, блок footer */}
       <Footer />
+
+      {/*//! pop-up`ы сайта */}
+      <PopupInfo
+        isOpen={isPopupInfoOpen}
+        img={isPopupInfoImage}
+        alt={isPopupInfoAlt}
+        message={isPopupInfoMessage}
+        onClose={closePopup}
+        setIsOpen={setIsPopupInfoOpen}
+      />
     </div >
   );
 }
