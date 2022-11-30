@@ -13,13 +13,13 @@ function Policies() {
 
       <nav className='policies__buttons'>
         <PoliciesButton
-          text={'terms of Service'}
+          text={'Terms of Service'}
         />
         <PoliciesButton
-          text={'privacy Policy'}
+          text={'Privacy Policy'}
         />
         <PoliciesButton
-          text={'coockie Policy'}
+          text={'Coockie Policy'}
         />
         <PoliciesButton
           text={'AML Policy'}
