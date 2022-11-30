@@ -6,7 +6,7 @@ function PoliciesButton({ text }) {
 
   const navigate = useNavigate();
 
-  const link = `/${text.split(" ").join("_")}`
+  const link = `/Policies/${text.split(" ").join("_")}`
 
   function onClick() {
     navigate(link);
