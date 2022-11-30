@@ -58,6 +58,11 @@
   content: "mail verification";
 }
 
+/** policies */
+#policies.bigTitle::after {
+  content: "Policies";
+}
+
 #terms-of-service.bigTitle::after {
   content: "Terms of Service";
 }
