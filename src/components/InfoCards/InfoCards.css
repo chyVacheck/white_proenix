@@ -1,0 +1,47 @@
+.infoCards{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin: 100px 0;
+}
+
+
+.infoCard__card {
+  width: 820px;
+  height: 130px;
+  box-sizing: border-box;
+  padding: 17px 100px 17px 20px;
+  background: #282828;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  column-gap: 20px;
+}
+
+.infoCard__content {
+  box-sizing: border-box;
+  padding: 9px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.infoCard__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 22px;
+
+  color: #ffffff;
+}
+
+.infoCard__message {
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 22px;
+
+  color: #afafaf;
+}
