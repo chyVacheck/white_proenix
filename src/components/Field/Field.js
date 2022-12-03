@@ -1,9 +1,9 @@
 
 import './Field.css';
 
-function Field({ inputName, fieldName, value, handleChange, minLength, maxLength, type, required = true, children, showPass = false }) {
+function Field({ className, readOnly = false, isPlaceholder = true, inputName, fieldName, value, handleChange, minLength, maxLength, type, required = true, children, showPass = false }) {
 
-  const placeholder = 'Enter your ' + fieldName.toLowerCase()
+  const placeholder = isPlaceholder ? 'Enter your ' + fieldName.toLowerCase() : ''
 
   return (
     <article className="field">
@@ -22,8 +22,13 @@ function Field({ inputName, fieldName, value, handleChange, minLength, maxLength
         type={showPass ? 'text' : type}
         required={required}
         placeholder={placeholder}
-        className='field__input'
+        className={'field__input ' + className }
         id={fieldName}
+
+        readOnly={readOnly}
+        step={1}
+        min={10}
+        max={null}
       />
       {children}
     </article>

@@ -9,6 +9,7 @@
   font-size: 14px;
   line-height: 20px;
   color: #afafaf;
+  text-align: start;
 }
 
 .field__input {
@@ -28,8 +29,17 @@
   border: #282828 1px solid;
 }
 
+.field__input_home {
+  height: 60px;
+}
+
 .field__input:focus-visible {
   border: #fff 1px solid;
   outline: none;
   caret-color: #fff;
+}
+
+.field__input::-webkit-outer-spin-button,
+.field__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
