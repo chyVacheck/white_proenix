@@ -18,7 +18,7 @@ function Footer() {
 
           <FooterInfoColumn
             title='Features'
-            links={['Exchange', 'VPM', 'Track Order', 'Live Prices', 'Coin Specs']}
+            links={['Exchange', 'VPM', 'Live Prices']}
           />
 
           <FooterInfoColumn
