@@ -42,12 +42,22 @@
   content: "exchange and buy";
 }
 
+#storage-buying-and-selling-cryptocurrency.bigTitle {
+  max-width: 928px;
+}
+
 #storage-buying-and-selling-cryptocurrency.bigTitle::after {
   content: "Storage, Buying and Selling Cryptocurrency";
+  max-width: 928px;
+}
+
+#cryptocurrency-exchange.bigTitle {
+  width: 640px;
 }
 
 #cryptocurrency-exchange.bigTitle::after {
   content: "Cryptocurrency exchange";
+  width: 640px;
 }
 
 #clients-about-us.bigTitle::after {
