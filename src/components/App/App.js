@@ -14,7 +14,6 @@ import Footer from '../Footer/Footer.js';
 import Policies from '../Policies/Policies';
 // компоненты из Policies
 import FooterPages from '../FooterPages/FooterPages';
-import HowItWorks from '../HowItWorks/HowItWorks';
 
 //? авторизация/регистрация
 import Register from '../Register/Register.js';
@@ -22,12 +21,15 @@ import Login from '../Login/Login.js';
 
 //? pop-up
 import PopupInfo from '../PopupInfo/PopupInfo';
+import PopupCrypto from '../PopupCrypto/PopupCrypto';
 
 //* хуки
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import useForm from '../../hooks/useForm';
 
 //* constants
-import { popupInfoContent } from './../../utils/constants.js';
+import { popupInfoContent, CryptoContent } from './../../utils/constants.js';
+
 
 function App() {
 
@@ -35,14 +37,47 @@ function App() {
   const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
 
   //* State for PopupInfo
-  const [isPopupInfoOpen, setIsPopupInfoOpen] = useState(true);
   const [isPopupInfoImage, setIsPopupInfoImage] = useState(popupInfoContent.images.icon.waiting);
   const [isPopupInfoAlt, setIsPopupInfoAlt] = useState(popupInfoContent.images.alt.waiting);
   const [isPopupInfoMessage, setIsPopupInfoMessage] = useState(popupInfoContent.message.waiting);
+  const [isPopupInfoOpen, setIsPopupInfoOpen] = useState(false);
 
-  //? функция закрытия pop-up`ов
-  function closePopup(state, setState) {
-    setState(!state);
+  //* State for PopupCrypto
+  const [isPopupCryptoOpen, setIsPopupCryptoOpen] = useState(false);
+
+  //* State for Exchange in home
+  const [sendCrypto, setSendCrypto] = useState(CryptoContent.USDT);
+  const [resultingCrypto, setResultingCrypto] = useState(CryptoContent.BTC);
+
+  const [sendPopup, setSendPopup] = useState(true);
+
+
+  const { values: sendValues, handleChange: handleChangeSendValues, setValues: setSendValues } = useForm({
+    sendPrice: 1,
+    sendType: 'BTC',
+  });
+
+  const { values: resulValues, handleChange: handleChangeResulValues /* <- использоваться не будет */, setValues: setResulValues
+  } = useForm({
+    resulPrice: 1,
+    resulType: '',
+  });
+
+  // useEffect(() => {
+  //   setResulValues({
+  //     resulPrice: sendValues.sendPrice,
+  //     resulType: '',
+  //   })
+  // }, [sendValues.sendPrice]);
+
+  function openCryptoPopupSend() {
+    setIsPopupCryptoOpen(true);
+    setSendPopup(true);
+  }
+
+  function openCryptoPopupRes() {
+    setIsPopupCryptoOpen(true);
+    setSendPopup(false);
   }
 
 
@@ -70,6 +105,18 @@ function App() {
             <>
               {/*//? основная часть сайта, блок main */}
               <Home
+                sendValue={sendValues.sendPrice}
+                sendValueType={sendValues.sendType}
+                sendValueInputName={'sendPrice'}
+                handleChangeSendValue={handleChangeSendValues}
+
+                resulValue={resulValues.resulPrice}
+                openCryptoPopupSend={openCryptoPopupSend}
+                openCryptoPopupRes={openCryptoPopupRes}
+
+                sendCrypto={sendCrypto}
+                resultingCrypto={resultingCrypto}
+
                 logOf={logOf}
               />
             </>
@@ -151,12 +198,19 @@ function App() {
       {/*//! pop-up`ы сайта */}
       <PopupInfo
         isOpen={isPopupInfoOpen}
+        setIsOpen={setIsPopupInfoOpen}
         img={isPopupInfoImage}
         alt={isPopupInfoAlt}
         message={isPopupInfoMessage}
-        onClose={closePopup}
-        setIsOpen={setIsPopupInfoOpen}
       />
+
+      <PopupCrypto
+        isOpen={isPopupCryptoOpen}
+        setIsOpen={setIsPopupCryptoOpen}
+
+        setCurrentCrypto={sendPopup ? setSendCrypto : setResultingCrypto }
+      />
+
     </div >
   );
 }
