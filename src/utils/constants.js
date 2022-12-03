@@ -20,11 +20,22 @@ import imagePopupCryptoTRXG from './../images/crypto/trx_gold.svg';
 import imagePopupCryptoUSDT from './../images/crypto/usdt.svg';
 import imagePopupCryptoUSDTG from './../images/crypto/usdt_gold.svg';
 
-//? Pages
+
+//? Pages About us
+import HowItWorks from './../Pages/HowItWoks';
+
+//? Pages Features
+
+//? Pages Patrtner with us
+
+//? Pages Policies
 import TermsOfService from './../Pages/TermsOfService.js';
 import PrivacyPolicy from './../Pages/PrivacyPolicy.js';
-import CoockiePolicy from '../Pages/CoockiePolicy';
-import AMLPolicy from '../Pages/AMLPolicy.js';
+import CoockiePolicy from './../Pages/CoockiePolicy';
+import AMLPolicy from './../Pages/AMLPolicy.js';
+
+//? Pages Support Center
+
 
 const images = {
   icon: {
@@ -49,7 +60,7 @@ export const popupInfoContent = {
 }
 
 const Pages = {
-  '/About_us/How_it_works': '',
+  '/About_us/How_it_works': <HowItWorks />,
   '/About_us/Fees': '',
 
 
