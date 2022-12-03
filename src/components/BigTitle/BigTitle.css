@@ -68,6 +68,11 @@
   content: "mail verification";
 }
 
+/** About us*/
+#how-it-works.bigTitle::after {
+  content: "How it works";
+}
+
 /** policies */
 #policies.bigTitle::after {
   content: "Policies";
