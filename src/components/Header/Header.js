@@ -19,7 +19,7 @@ function Header({ currentEmail, isLogined = false }) {
   const page = location.pathname;
 
   return (
-    <header className='header'>
+    <header className={page === '/Home' ? 'header header_home' : ' header'}>
 
       <NavLink to={`/Home`}>
         <img alt="White Proenix" className='header__logo' src={logo} />
