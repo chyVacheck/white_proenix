@@ -10,6 +10,9 @@ import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
 import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
 
+//? page not found or in development
+import PageNotFoundOrInDevelopment from '../PageNotFoundOrInDevelopment/PageNotFoundOrInDevelopment';
+
 //? компоненты из Footer
 import Policies from '../Policies/Policies';
 // компоненты из Policies
@@ -184,9 +187,19 @@ function App() {
         {/* все остальное {любой путь кроме выше описанных} */}
         <Route
           // todo не забыть включить обратно
-          path=""
+          path="*"
           element={
-            <Navigate to="/home" />
+            <Navigate to="/Page_Not_Found_Or_In_Development" />
+          }>
+        </Route>
+
+        {/* Страницы нет или в разработке {PageNotFoundOrInDevelopment} */}
+        <Route
+          path='/Page_Not_Found_Or_In_Development'
+          element={
+            <>
+              <PageNotFoundOrInDevelopment />
+            </>
           }>
         </Route>
 
@@ -208,7 +221,7 @@ function App() {
         isOpen={isPopupCryptoOpen}
         setIsOpen={setIsPopupCryptoOpen}
 
-        setCurrentCrypto={sendPopup ? setSendCrypto : setResultingCrypto }
+        setCurrentCrypto={sendPopup ? setSendCrypto : setResultingCrypto}
       />
 
     </div >
