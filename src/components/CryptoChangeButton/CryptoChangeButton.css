@@ -1,0 +1,59 @@
+.cryptoChangeButton {
+  margin: 0;
+  width: 330px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.cryptoChangeButton__button {
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  height: 100%;
+  width: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.4s, 0.4s linear;
+  color: #fff;
+}
+
+.cryptoChangeButton__button:hover {
+  text-decoration: underline;
+  scale: 1.2;
+}
+
+.cryptoChangeButton__image {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+}
+
+.cryptoChangeButton__name {
+  height: 38px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+
+  color: #ffffff;
+}
+
+.cryptoChangeButton__fullname {
+  height: 30px;
+  padding-left: 15px;
+  border-left: 2px solid #fff;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 38px;
+  color: #585858;
+}
