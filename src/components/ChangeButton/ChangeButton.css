@@ -1,0 +1,43 @@
+.changeButton {
+  height: 50px;
+  display: flex;
+
+  padding-left: 9px;
+  border-left: 2px solid #585858;
+
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  width: 102px;
+  color: #ffffff;
+}
+
+.changeButton__button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 5px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+.changeButton__image {
+  width: 25px;
+  height: 25px;
+}
+
+.changeButton__name:hover {
+  text-decoration: underline !important;
+}
