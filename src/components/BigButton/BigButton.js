@@ -1,10 +1,10 @@
 
 import './BigButton.css';
 
-function BigButton({ func = ((str = '') => { console.log(str) }), type, sizeBig, children }) {
+function BigButton({ func = (() => { console.log('I am big button') }), type, sizeBig, children }) {
 
-  function onClick() {
-    func(children);
+  function onClick(event) {
+    func(event);
   }
 
   return (
