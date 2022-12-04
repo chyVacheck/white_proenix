@@ -1,5 +1,269 @@
 .exchange-buy {
   color: #fff;
-  min-height: 100px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 50px;
+  margin: 0 0 100px;
+}
+
+.exchange-buy__all-ways {
+  max-width: 1030px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.exchange-buy__way {
+  height: 51px;
+  min-width: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.exchange-buy__way-line {
+  min-width: 120px;
+  height: 0px;
+  border: 1px solid #282828;
+}
+
+.exchange-buy__way-line_current {
+  border: 1px solid #f5c249;
+}
+
+.exchange-buy__way-nummer {
+  background-color: #282828;
+  height: 51px;
+  width: 51px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exchange-buy__way-nummer_current {
+  background-color: #f5c249;
+  color: #0b0b0b;
+}
+
+.exchange-buy__way-name {
+  margin: 0 0 0 10px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #afafaf;
+}
+
+.exchange-buy__container {
+  background: #121212;
+  border-radius: 25px;
+  max-width: 1030px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 50px;
+}
+
+.exchange-buy__container_closed {
+  display: none;
+}
+
+.exchange-buy__title {
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.exchange-buy__title_center {
+  text-align: center;
+}
+
+.exchange-buy__title_deposit {
+  min-height: 76px;
+}
+
+.exchange-buy__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  align-items: center;
+}
+
+.exchange-buy__fields-info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.exchange-buy__fields {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  width: 100%;
+  max-width: calc(50% - 10px);
+}
+
+.exchange-buy__fields_adress {
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 8px;
+  max-width: 100%;
+}
+
+.exchange-buy__information {
+  width: 100%;
+}
+
+.exchange-buy__information-container {
+  box-sizing: border-box;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 23.65px);
+  background: #282828;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.exchange-buy__information-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  color: #afafaf;
+}
+
+.exchange-buy__information-value {
+  margin: 0;
+}
+
+.exchange-buy__information-title {
+  margin: 0 0 3.65px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #afafaf;
+  text-align: start;
+}
+
+.exchange-buy__destination-adress {
+  width: 100%;
+}
+
+.exchange-buy__adress-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.exchange-buy__button-copy {
+  width: 120px;
+  height: 25px;
+
+  background: linear-gradient(
+    89.03deg,
+    #a7722e -0.18%,
+    #e6d39b 67.22%,
+    #debc67 84.79%
+  );
+  border-radius: 6px;
+  border: none;
+  position: absolute;
+  bottom: 17.5px;
+  right: 17.5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+
+  text-align: center;
+
+  color: #282828;
+}
+
+.exchange-buy__information-list {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  color: #afafaf;
+  text-align: start;
+}
+
+.exchange-buy__adress-details {
+  width: 100%;
+}
+
+.exchange-buy__adresses {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0 0;
+  justify-content: space-between;
+}
+
+.exchange-buy__adress {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: start;
+  width: 50%;
+}
+
+.exchange-buy__adress-name {
+  font-weight: 500;
+  font-size: 15.5457px;
+  line-height: 22px;
+  color: #afafaf;
+  margin: 0;
+}
+
+.exchange-buy__adress-value {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.55px;
+  line-height: 27px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.exchange-buy__img-result {
+  width: 236px;
+  height: 236px;
+}
+
+.exchange-buy__message {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.exchange-buy__message-waiting {
+  font-weight: 500;
+  font-size: 15.55px;
+  line-height: 23px;
+  text-align: center;
+  margin: 0;
+  color: #afafaf;
 }
