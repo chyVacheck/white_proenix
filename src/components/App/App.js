@@ -66,12 +66,6 @@ function App() {
     resulType: '',
   });
 
-  // useEffect(() => {
-  //   setResulValues({
-  //     resulPrice: sendValues.sendPrice,
-  //     resulType: '',
-  //   })
-  // }, [sendValues.sendPrice]);
 
   function openCryptoPopupSend() {
     setIsPopupCryptoOpen(true);
@@ -151,7 +145,21 @@ function App() {
           path='/exchange_&_Buy'
           element={
             <>
-              <ExchangeBuy />
+              <ExchangeBuy
+                sendValue={sendValues.sendPrice}
+                sendValueType={sendValues.sendType}
+                sendValueInputName={'sendPrice'}
+                handleChangeSendValue={handleChangeSendValues}
+
+                resulValue={resulValues.resulPrice}
+                openCryptoPopupSend={openCryptoPopupSend}
+                openCryptoPopupRes={openCryptoPopupRes}
+
+                sendCrypto={sendCrypto}
+                resultingCrypto={resultingCrypto}
+
+                logOf={logOf}
+              />
             </>
           }>
         </Route>
