@@ -1,0 +1,81 @@
+.mailVerification {
+  color: #fff;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/** text-mail */
+.mailVerification__mail-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.5457px;
+  line-height: 22px;
+  margin: 40px 0 0;
+  color: #afafaf;
+}
+
+.mailVerification__text {
+  margin: 0;
+  color: #afafaf;
+}
+
+.mailVerification__mail {
+  margin: 0;
+  color: #f5c249;
+}
+
+/** form */
+
+.mailVerification__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.mailVerification__inputs {
+  display: flex;
+  justify-content: center;
+  column-gap: 22px;
+  margin: 48px 0 0;
+}
+
+.mailVerification__input {
+  margin: 0;
+  border: #f5c249 1px solid;
+  width: 74.5px;
+  height: 74.5px;
+  background-color: transparent;
+  border-radius: 8.88328px;
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.mailVerification__time {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  color: #afafaf;
+}
+
+.mailVerification__resend {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5c249;
+}

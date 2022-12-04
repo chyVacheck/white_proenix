@@ -21,13 +21,14 @@ import FooterPages from '../FooterPages/FooterPages';
 //? авторизация/регистрация
 import Register from '../Register/Register.js';
 import Login from '../Login/Login.js';
+import MailVerification from './../MailVerification/MailVerification.js';
 
 //? pop-up
 import PopupInfo from '../PopupInfo/PopupInfo';
 import PopupCrypto from '../PopupCrypto/PopupCrypto';
 
 //* хуки
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useForm from '../../hooks/useForm';
 
 //* constants
@@ -97,7 +98,7 @@ function App() {
         {/* основной контент {home} */}
         <Route
           exact
-          path="/home"
+          path="/Home"
           element={
             <>
               {/*//? основная часть сайта, блок main */}
@@ -124,7 +125,7 @@ function App() {
 
         {/* регистрация {register} */}
         <Route
-          path='/register'
+          path='/Register'
           element={
             <>
               <Register />
@@ -134,10 +135,21 @@ function App() {
 
         {/* авторизация {login} */}
         <Route
-          path='/login'
+          path='/Login'
           element={
             <>
               <Login />
+            </>
+          }>
+        </Route>
+
+
+        {/* авторизация {Mail_Verification} */}
+        <Route
+          path='/Mail_Verification'
+          element={
+            <>
+              <MailVerification />
             </>
           }>
         </Route>
