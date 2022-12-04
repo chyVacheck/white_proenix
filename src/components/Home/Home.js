@@ -18,15 +18,15 @@ function Home({
   sendValue = 1,
   sendValueInputName = '',
   handleChangeSendValue,
-  openCryptoPopupSend,//!...
-  openCryptoPopupRes,//!...
+  openCryptoPopupSend,
+  openCryptoPopupRes,
   resulValue,
 
   sendCrypto,
   resultingCrypto,
 
 }) {
-
+ 
   return (
     <section className='home'>
       <BigTitle id={'storage-buying-and-selling-cryptocurrency'}>
@@ -50,14 +50,7 @@ function Home({
           Buy cryptocurrency
         </BigButton>
 
-        <div className='home__list-prices'>
-          <CryptoPrice />
-          <CryptoPrice />
-          <CryptoPrice />
-          <CryptoPrice />
-          <CryptoPrice />
-          <CryptoPrice />
-        </div>
+        <CryptoPrice/>
 
         <article className='home__exchange'>
           <BigTitle id={'cryptocurrency-exchange'}>
@@ -66,7 +59,7 @@ function Home({
 
           <form className='home__form'>
             <Field
-              className={'field__input_home'}
+              className={'field__input_big'}
               isPlaceholder={false}
               value={sendValue}
               inputName={sendValueInputName}
@@ -83,7 +76,7 @@ function Home({
 
             </Field>
             <Field
-              className={'field__input_home'}
+              className={'field__input_big'}
               isPlaceholder={false}
               inputName={null}
               fieldName='You Receive'

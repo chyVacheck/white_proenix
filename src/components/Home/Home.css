@@ -42,18 +42,6 @@
   color: #ffffff;
 }
 
-.home__list-prices {
-  margin: 150px 0 100px;
-  width: 100%;
-  min-height: 160px;
-  filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.1);
-  background-color: red;
-  display: flex;
-  flex-direction: row;
-  column-gap: 18.38px;
-}
-
 .home__exchange {
   padding: 50px 90px;
   background-color: rgba(146, 146, 146, 0.05);
