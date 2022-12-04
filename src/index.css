@@ -13,3 +13,16 @@
 #root {
   min-height: 100vh;
 }
+
+body::-webkit-scrollbar {
+  width: 9px; /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #282828; /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: #bfbfbf; /* цвет плашки */
+  border-radius: 5px; /* закругления плашки */
+  margin: 10px 0;
+}
