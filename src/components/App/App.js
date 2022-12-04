@@ -114,6 +114,8 @@ function App() {
                 sendCrypto={sendCrypto}
                 resultingCrypto={resultingCrypto}
 
+                setResultingCrypto={setResultingCrypto}
+
                 logOf={logOf}
               />
             </>

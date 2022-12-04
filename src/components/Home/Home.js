@@ -2,7 +2,7 @@
 import './Home.css';
 import BigTitle from './../BigTitle/BigTitle.js';
 import BigButton from './../BigButton/BigButton.js';
-import CryptoPrice from './../CryptoPrice/CryptoPrice.js';
+import CurrencyReserve from '../CurrencyReserve/CurrencyReserve.js';
 import Field from './../Field/Field.js';
 import ChangeButton from '../ChangeButton/ChangeButton';
 import InfoCards from '../InfoCards/InfoCards.js'
@@ -24,9 +24,10 @@ function Home({
 
   sendCrypto,
   resultingCrypto,
+  setResultingCrypto,
 
 }) {
- 
+
   return (
     <section className='home'>
       <BigTitle id={'storage-buying-and-selling-cryptocurrency'}>
@@ -50,7 +51,10 @@ function Home({
           Buy cryptocurrency
         </BigButton>
 
-        <CryptoPrice/>
+        <CurrencyReserve
+          resultingCrypto={resultingCrypto}
+          setResultingCrypto={setResultingCrypto}
+        />
 
         <article className='home__exchange'>
           <BigTitle id={'cryptocurrency-exchange'}>

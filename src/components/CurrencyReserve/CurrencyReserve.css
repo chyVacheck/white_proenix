@@ -1,0 +1,78 @@
+.currencyReserve {
+  width: 100%;
+  margin: 150px 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px 0;
+  column-gap: 18px;
+  color: white;
+  position: relative;
+}
+
+.currencyReserve-blur {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0px;
+  /* display: none; */
+  filter: blur(45px);
+}
+
+.currencyReserve__crypto {
+  width: 215px;
+  height: 125px;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: space-between;
+}
+
+.currencyReserve__image-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.currencyReserve__image {
+  width: 30px;
+  height: 30px;
+  transition: 0.25s, 0.25s linear;
+  cursor: pointer;
+}
+
+.currencyReserve__image:hover {
+  scale: 1.35;
+}
+
+.currencyReserve__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+}
+
+.currencyReserve__image-number {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.currencyReserve__image-text {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  color: #afafaf;
+  margin: 0;
+}
