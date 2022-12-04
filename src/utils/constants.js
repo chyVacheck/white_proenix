@@ -79,43 +79,50 @@ const CryptoContent = {
     img: imagePopupCryptoBTC,
     img_g: imagePopupCryptoBTCG,
     alt: 'BTC',
-    name: 'Bitcoin'
+    name: 'Bitcoin',
+    addres: 'bc1q6r2qmmp5g7prthvu4kemhnt5thhaxfp4qpj79g',
   },
   'BNB': {
     img: imagePopupCryptoBNB,
     img_g: imagePopupCryptoBNBG,
     alt: 'BNB',
-    name: 'Binance Coin'
+    name: 'Binance Coin',
+    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
   },
   'ETH': {
     img: imagePopupCryptoETH,
     img_g: imagePopupCryptoETHG,
     alt: 'ETH',
-    name: 'Ethereum'
+    name: 'Ethereum',
+    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
   },
   'MATIC': {
     img: imagePopupCryptoMATIC,
     img_g: imagePopupCryptoMATICG,
     alt: 'MATIC',
-    name: 'Polygon'
+    name: 'Polygon',
+    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
   },
   'NEXO': {
     img: imagePopupCryptoNEXO,
     img_g: imagePopupCryptoNEXOG,
     alt: 'NEXO',
-    name: ''
+    name: '',
+    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
   },
   'TRX': {
     img: imagePopupCryptoTRX,
     img_g: imagePopupCryptoTRXG,
     alt: 'TRX',
-    name: 'TRON'
+    name: 'TRON',
+    addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
   },
   'USDT': {
     img: imagePopupCryptoUSDT,
     img_g: imagePopupCryptoUSDTG,
     alt: 'USDT',
-    name: 'Tether USD'
+    name: 'Tether USD',
+    addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
   }
 }
 
