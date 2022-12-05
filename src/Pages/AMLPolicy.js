@@ -1,6 +1,6 @@
 
 import BigTitle from './../components/BigTitle/BigTitle.js';
-import LastUpdate from './../components/LastUpdate/LastUpdate.js';
+import LastUpdate from '../components/FooterPages/LastUpdate/LastUpdate.js';
 
 import Paragrafs from './../components/FooterPages/Paragrafs/Paragrafs.js';
 import List from './../components/FooterPages/List/List.js';
