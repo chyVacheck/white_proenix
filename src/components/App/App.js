@@ -26,7 +26,8 @@ import PopupInfo from '../PopupInfo/PopupInfo';
 import PopupCrypto from '../PopupCrypto/PopupCrypto';
 
 //* info pages
-import PageNotFoundOrInDevelopment from './../Pages/PageNotFoundOrInDevelopment/PageNotFoundOrInDevelopment.js';
+import PageNotFoundOrInDevelopment from './../Pages/PageNotFoundOrInDevelopment.js';
+import YouAreNotLoggedIn from './../Pages/YouAreNotLoggedIn.js';
 
 //* хуки
 import { useState } from 'react';
@@ -212,7 +213,8 @@ function App() {
           }>
         </Route>
 
-        {/* Страницы нет или в разработке {PageNotFoundOrInDevelopment} */}
+        {/* //? Info Pages */}
+        {/* Страницы нет или в разработке {Page_Not_Found_Or_In_Development} */}
         <Route
           path='/Page_Not_Found_Or_In_Development'
           element={
@@ -221,6 +223,17 @@ function App() {
             </>
           }>
         </Route>
+
+        {/* у вас нет доступа к этой странице {You_are_not_logged_in} */}
+        <Route
+          path='/You_are_not_logged_in'
+          element={
+            <>
+              <YouAreNotLoggedIn />
+            </>
+          }>
+        </Route>
+
 
       </Routes>
 

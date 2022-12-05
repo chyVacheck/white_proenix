@@ -1,4 +1,4 @@
-.pageNotFoundOrInDevelopment {
+.pages {
   width: 1030px;
   height: 481px;
 
@@ -16,7 +16,21 @@
   row-gap: 50px;
 }
 
-.pageNotFoundOrInDevelopment__text {
+.pages__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 27px;
+
+  color: #ffffff;
+}
+
+.pages__image {
+  width: 236px;
+  height: 235px;
+}
+
+.pages__text {
   margin: 0;
   font-weight: 500;
   font-size: 25px;
@@ -25,7 +39,7 @@
   color: #ffffff;
 }
 
-.pageNotFoundOrInDevelopment__image {
-  width: 236px;
-  height: 235px;
+.pages__link{
+  text-decoration: underline;
+  color: #ffffff;
 }
