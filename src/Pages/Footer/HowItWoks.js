@@ -1,9 +1,9 @@
 
-import BigTitle from './../components/BigTitle/BigTitle.js';
+import BigTitle from './../../components/BigTitle/BigTitle.js';
 
-import Title from './../components/FooterPages/Title/Title.js';
-import Paragrafs from './../components/FooterPages/Paragrafs/Paragrafs.js';
-import List from './../components/FooterPages/List/List.js';
+import Title from './../../components/FooterPages/Title/Title.js';
+import Paragrafs from './../../components/FooterPages/Paragrafs/Paragrafs.js';
+import List from './../../components/FooterPages/List/List.js';
 
 function HowItWorks() {
 

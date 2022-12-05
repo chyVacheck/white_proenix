@@ -22,17 +22,17 @@ import imagePopupCryptoUSDTG from './../images/crypto/usdt_gold.svg';
 
 
 //? Pages About us
-import HowItWorks from './../Pages/HowItWoks';
+import HowItWorks from './../Pages/Footer/HowItWoks';
 
 //? Pages Features
 
 //? Pages Patrtner with us
 
 //? Pages Policies
-import TermsOfService from './../Pages/TermsOfService.js';
-import PrivacyPolicy from './../Pages/PrivacyPolicy.js';
-import CoockiePolicy from './../Pages/CoockiePolicy';
-import AMLPolicy from './../Pages/AMLPolicy.js';
+import TermsOfService from './../Pages/Footer/TermsOfService.js';
+import PrivacyPolicy from './../Pages/Footer/PrivacyPolicy.js';
+import CoockiePolicy from './../Pages/Footer/CoockiePolicy';
+import AMLPolicy from './../Pages/Footer/AMLPolicy.js';
 
 //? Pages Support Center
 

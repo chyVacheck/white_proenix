@@ -1,10 +1,10 @@
 
-import BigTitle from './../components/BigTitle/BigTitle.js';
-import LastUpdate from '../components/FooterPages/LastUpdate/LastUpdate.js';
+import BigTitle from './../../components/BigTitle/BigTitle.js';
+import LastUpdate from './../../components/FooterPages/LastUpdate/LastUpdate.js';
 
-import Paragrafs from './../components/FooterPages/Paragrafs/Paragrafs.js';
-import List from './../components/FooterPages/List/List.js';
-import Table from '../components/FooterPages/Table/Table.js';
+import Paragrafs from './../../components/FooterPages/Paragrafs/Paragrafs.js';
+import List from './../../components/FooterPages/List/List.js';
+import Table from './../../components/FooterPages/Table/Table.js';
 
 function CoockiePolicy() {
 
