@@ -14,6 +14,7 @@ function PopupCrypto({ isOpen, setIsOpen, setCurrentCrypto }) {
 
   return (
     <Popup
+      name={'crypto'}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
     >

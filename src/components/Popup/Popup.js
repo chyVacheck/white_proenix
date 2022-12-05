@@ -1,6 +1,6 @@
 import './Popup.css';
 
-function Popup({ isOpen, setIsOpen, children, ...props }) {
+function Popup({ name, isOpen, setIsOpen, children, ...props }) {
 
   function onClose() {
     setIsOpen(false);
@@ -9,7 +9,7 @@ function Popup({ isOpen, setIsOpen, children, ...props }) {
   const className = props.className + " popup__container"
 
   return (
-    <section id={`popup`} className={isOpen ? 'popup popup_opened' : 'popup'}>
+    <section id={`popup-${name}`} className={isOpen ? 'popup popup_opened' : 'popup'}>
       <article id={`popup-container`} className={className}>
         {children}
         <button

@@ -8,6 +8,7 @@ function PopupInfo({ isOpen, setIsOpen, img, alt, message }) {
 
   return (
     <Popup
+      name={'info'}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
       className={'popupInfo'}
