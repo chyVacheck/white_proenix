@@ -3,12 +3,16 @@ import './App.css';
 
 import { Routes, Navigate, Route } from 'react-router-dom';
 //* компоненты
+//? для администрации
+import { AdminLogin } from './../Admin/Admin.js';
+// import AdminPanel from './../Admin/AdminPanel.js';
+
 //? основные
-import Header from '../Header/Header.js';
-import Home from '../Home/Home.js';
-import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
-import Support from '../Support/Support';
-import Footer from '../Footer/Footer.js';
+import Header from './../Header/Header.js';
+import Home from './../Home/Home.js';
+import ExchangeBuy from './../ExchangeBuy/ExchangeBuy';
+import Support from './../Support/Support';
+import Footer from './../Footer/Footer.js';
 import Profile from './../Profile/Profile.js';
 
 //? защита стр
@@ -98,6 +102,17 @@ function App() {
       />
 
       <Routes>
+
+        {/* админ панель {AdminPanel} */}
+        <Route
+          exact
+          path="/Admin"
+          element={
+            <AdminLogin />
+          }>
+        </Route>
+
+
         {/* основной контент {home} */}
         <Route
           exact
