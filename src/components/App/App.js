@@ -10,8 +10,6 @@ import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
 import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
 
-//? page not found or in development
-import PageNotFoundOrInDevelopment from '../PageNotFoundOrInDevelopment/PageNotFoundOrInDevelopment';
 
 //? компоненты из Footer
 import Policies from '../Policies/Policies';
@@ -27,6 +25,9 @@ import MailVerification from './../MailVerification/MailVerification.js';
 import PopupInfo from '../PopupInfo/PopupInfo';
 import PopupCrypto from '../PopupCrypto/PopupCrypto';
 
+//* info pages
+import PageNotFoundOrInDevelopment from './../Pages/PageNotFoundOrInDevelopment/PageNotFoundOrInDevelopment.js';
+
 //* хуки
 import { useState } from 'react';
 import useForm from '../../hooks/useForm';
@@ -37,7 +38,7 @@ import { popupInfoContent, CryptoContent } from './../../utils/constants.js';
 
 function App() {
 
-  const [isLogined, setIsLogined] = useState(false);
+  const [isLogined, setIsLogined] = useState(true);
   const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
 
   //* State for PopupInfo
@@ -61,12 +62,10 @@ function App() {
     sendType: 'BTC',
   });
 
-  const { values: resulValues, handleChange: handleChangeResulValues /* <- использоваться не будет */, setValues: setResulValues
-  } = useForm({
+  const { values: resulValues, handleChange: handleChangeResulValues /* <- использоваться не будет */, setValues: setResulValues } = useForm({
     resulPrice: 1,
     resulType: '',
   });
-
 
   function openCryptoPopupSend() {
     setIsPopupCryptoOpen(true);
@@ -77,7 +76,6 @@ function App() {
     setIsPopupCryptoOpen(true);
     setSendPopup(false);
   }
-
 
   function logOf() {
     setIsLogined(false);
@@ -142,7 +140,6 @@ function App() {
             </>
           }>
         </Route>
-
 
         {/* авторизация {Mail_Verification} */}
         <Route

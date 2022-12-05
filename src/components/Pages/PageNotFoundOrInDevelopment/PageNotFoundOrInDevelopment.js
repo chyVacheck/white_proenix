@@ -1,6 +1,6 @@
 
 import './PageNotFoundOrInDevelopment.css'
-import img from './../../images/cardsInfo/Fast.svg';
+import img from './../../../images/cardsInfo/Fast.svg';
 
 function PageNotFoundOrInDevelopment() {
 
