@@ -1,10 +1,10 @@
 
 import './Reviews.css';
 
-import ChangeReviews from '../ChangeReviews/ChangeReviews';
+import ChangeReviews from './../../ChangeReviews/ChangeReviews';
 
-import star from './../../images/reviews/Star.svg';
-import comas from './../../images/reviews/Comas.svg';
+import star from './../../../images/reviews/Star.svg';
+import comas from './../../../images/reviews/Comas.svg';
 
 import { useState } from 'react';
 

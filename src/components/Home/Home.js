@@ -2,11 +2,11 @@
 import './Home.css';
 import BigTitle from './../BigTitle/BigTitle.js';
 import BigButton from './../BigButton/BigButton.js';
-import CurrencyReserve from '../CurrencyReserve/CurrencyReserve.js';
+import CurrencyReserve from './CurrencyReserve/CurrencyReserve.js';
 import Field from './../Field/Field.js';
 import ChangeButton from '../ChangeButton/ChangeButton';
 import InfoCards from '../InfoCards/InfoCards.js'
-import Reviews from './../Reviews/Reviews.js';
+import Reviews from './Reviews/Reviews.js';
 
 //? images for cards info
 import imgBuy from './../../images/cardsInfo/Buy.svg';
