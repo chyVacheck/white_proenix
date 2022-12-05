@@ -1,6 +1,6 @@
 
 import './PopupInfo.css';
-import Popup from './../Popup/Popup.js';
+import Popup from './../Popup.js';
 
 function PopupInfo({ isOpen, setIsOpen, img, alt, message }) {
 
