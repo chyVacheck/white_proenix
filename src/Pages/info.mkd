@@ -1,0 +1,28 @@
+## About this folder
+
+---
+
+### In this folder we have pages, the transition to which is from footer:
+
+- About us
+  - How it works (already have)
+  - Fees
+- Features
+  - Exchange
+  - VPM
+  - Live Prices
+- Patrtner with us
+  - Integrate our API
+  - Become an Affiliate
+  - Share your proposal
+  - Start your career
+- Policies (already have)
+- Terms of Service
+- Privacy Policy
+- oockie Policy
+- AML Policy
+
+* Support Center
+  - Explore FAQ
+  - Contact Us
+  - Sent Feedback
