@@ -9,16 +9,19 @@ import Home from '../Home/Home.js';
 import ExchangeBuy from '../ExchangeBuy/ExchangeBuy';
 import Support from '../Support/Support';
 import Footer from '../Footer/Footer.js';
+import Profile from './../Profile/Profile.js';
 
+//? защита стр
+import ProtecredRouter from './../ProtectedRouter/ProtectedRouter.js';
 
 //? компоненты из Footer
-import Policies from '../Policies/Policies';
+import Policies from './../Policies/Policies';
 // компоненты из Policies
-import FooterPages from '../FooterPages/FooterPages';
+import FooterPages from './../FooterPages/FooterPages';
 
 //? авторизация/регистрация
-import Register from '../Register/Register.js';
-import Login from '../Login/Login.js';
+import Register from './../Register/Register.js';
+import Login from './../Login/Login.js';
 import MailVerification from './../MailVerification/MailVerification.js';
 
 //? pop-up
@@ -26,12 +29,12 @@ import PopupInfo from './../Popup/PopupInfo/PopupInfo.js';
 import PopupCrypto from './../Popup/PopupCrypto/PopupCrypto.js';
 
 //* info pages
-import PageNotFoundOrInDevelopment from './../Pages/PageNotFoundOrInDevelopment.js';
-import YouAreNotLoggedIn from './../Pages/YouAreNotLoggedIn.js';
+import PageNotFoundOrInDevelopment from './../../Pages/Info/PageNotFoundOrInDevelopment.js';
+import YouAreNotLoggedIn from './../../Pages/Info/YouAreNotLoggedIn.js';
 
 //* хуки
 import { useState } from 'react';
-import useForm from '../../hooks/useForm';
+import useForm from './../../hooks/useForm';
 
 //* constants
 import { popupInfoContent, CryptoContent } from './../../utils/constants.js';
@@ -39,7 +42,8 @@ import { popupInfoContent, CryptoContent } from './../../utils/constants.js';
 
 function App() {
 
-  const [isLogined, setIsLogined] = useState(true);
+  const [isLogined, setIsLogined] = useState(false);
+  window.setIsLogined = ((value) => { setIsLogined(value) });
   const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
 
   //* State for PopupInfo
@@ -154,7 +158,7 @@ function App() {
 
         {/* покупка и обмен {exhange_&_Buy} */}
         <Route
-          path='/exchange_&_Buy'
+          path='/Exchange_&_Buy'
           element={
             <>
               <ExchangeBuy
@@ -178,10 +182,24 @@ function App() {
 
         {/* поодержка {Support} */}
         <Route
-          path='/support'
+          path='/Support'
           element={
             <>
               <Support />
+            </>
+          }>
+        </Route>
+
+        {/* поодержка {Profile} */}
+        <Route
+          path='/Profile'
+          element={
+            <>
+              <ProtecredRouter
+                loggedIn={isLogined}
+              >
+                <Profile />
+              </ProtecredRouter>
             </>
           }>
         </Route>

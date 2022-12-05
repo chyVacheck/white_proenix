@@ -36,6 +36,11 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 30px;
+  cursor: pointer;
+}
+
+.header__email:hover{
+  text-decoration: underline;
 }
 
 .header__email-icon {

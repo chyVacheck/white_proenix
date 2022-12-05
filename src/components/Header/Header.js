@@ -11,12 +11,17 @@ import HeaderNavlink from './__navlink/HeaderNavlink';
 import HeaderButton from './__button/HeaderButton.js';
 
 //? вспомогательны
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 function Header({ currentEmail, isLogined = false }) {
 
+  const navigate = useNavigate();
   let location = useLocation();
   const page = location.pathname;
+
+  function onClick() {
+    navigate('/Profile');
+  }
 
   return (
     <header className={page === '/Home' ? 'header header_home' : ' header'}>
@@ -45,7 +50,7 @@ function Header({ currentEmail, isLogined = false }) {
 
       <div className='header__email-button'>
         {isLogined ?
-          <div className='header__email'>
+          <div onClick={onClick} className='header__email'>
             {currentEmail}
             <img className='header__email-icon' alt='user icon' src={userIcon} />
           </div> :
