@@ -1,8 +1,8 @@
 
 import './PopupCrypto.css';
-import Popup from './../Popup/Popup.js';
-import CryptoChangeButton from './../CryptoChangeButton/CryptoChangeButton.js';
-import { CryptoContent as images } from '../../utils/constants';
+import Popup from '../Popup.js';
+import CryptoChangeButton from './__button/CryptoChangeButton.js';
+import { CryptoContent as images } from '../../../utils/constants';
 
 function PopupCrypto({ isOpen, setIsOpen, setCurrentCrypto }) {
 

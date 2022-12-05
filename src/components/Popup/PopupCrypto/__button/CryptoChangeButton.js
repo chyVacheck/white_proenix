@@ -1,14 +1,10 @@
 
 import './CryptoChangeButton.css';
-
-
 function CryptoChangeButton({ crypto, setCurrentCrypto, closePopup }) {
-
   function onClick() {
     setCurrentCrypto(crypto);
     closePopup();
   }
-
   return (
     <li className='cryptoChangeButton'>
       <button
@@ -21,11 +17,9 @@ function CryptoChangeButton({ crypto, setCurrentCrypto, closePopup }) {
           src={crypto.img}
         />
         <span className='cryptoChangeButton__name'>{crypto.alt}</span>
-
       </button>
       <span className='cryptoChangeButton__fullname'>{crypto.name}</span>
     </li>
   )
 }
-
 export default CryptoChangeButton;

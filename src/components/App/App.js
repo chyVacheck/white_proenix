@@ -23,7 +23,7 @@ import MailVerification from './../MailVerification/MailVerification.js';
 
 //? pop-up
 import PopupInfo from '../PopupInfo/PopupInfo';
-import PopupCrypto from '../PopupCrypto/PopupCrypto';
+import PopupCrypto from '../Popup/PopupCrypto/PopupCrypto';
 
 //* info pages
 import PageNotFoundOrInDevelopment from './../Pages/PageNotFoundOrInDevelopment.js';
