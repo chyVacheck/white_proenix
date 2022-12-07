@@ -145,6 +145,13 @@
   padding: 0;
 }
 
+.profile__container_history {
+  background-color: transparent;
+  padding: 0;
+  row-gap: 10px;
+  justify-content: start;
+}
+
 .profile__container__general-info-block {
   width: 100%;
   display: flex;
@@ -204,4 +211,44 @@
 .profile__history {
   width: 100%;
   height: 290px;
+}
+
+.profile__transactions {
+  background: #282828;
+  border-radius: 12px;
+  width: 100%;
+  height: 57px;
+  padding: 17px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.profile__values {
+  display: flex;
+  flex-direction: row;
+  column-gap: 35px;
+}
+
+.profile__values-text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+
+  color: #afafaf;
+}
+
+.profile__values-status{
+  width: 110px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__values-img{
+  width: 23px;
+  height: 23px;
+  margin: 0 0 0 15px;
 }

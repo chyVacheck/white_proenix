@@ -9,6 +9,12 @@ import star from './../../images/reviews/Star.svg';
 import user_img from './../../images/User_black.svg';
 import { useEffect, useState } from 'react';
 
+const image = {
+  'complete': complete,
+  'waiting': waiting,
+  'error': error,
+}
+
 function Profile({
   currentUser = {
     fullName: { text: 'Viktor Barinov' },
@@ -20,7 +26,12 @@ function Profile({
       current: 7.523,
       all: 10,
     }
-  }
+  },
+  lastTransactions = [
+    { sendValue: 1400, resValue: 1, sendType: 'Matic', resType: 'BTC', img: 'complete', time: '11 : 11 November 11' },
+    { sendValue: 1245, resValue: 3.5, sendType: 'BNB', resType: 'Matic', img: 'error', time: '07 : 46 November 21' },
+  ]
+
 }) {
 
   let stars = [];
@@ -146,7 +157,7 @@ function Profile({
 
             {/* Verification complete */}
             <div className='profile__container-verification'>
-              Verification complete <img className='profile__container__verification-img' src={complete} alt={''}/>
+              Verification complete <img className='profile__container__verification-img' src={complete} alt={''} />
             </div>
           </div>
         </div>
@@ -154,17 +165,41 @@ function Profile({
 
       {/*//? Transactions History */}
       <div className='profile__history'>
-        <h2 className='profile__title'>Transactions History</h2>
-        <div className='profile__container'>
-          <p>
-            lol here is ampty
-          </p>
-          <p>
-            lol here is ampty
-          </p>
-          <p>
-            lol here is ampty
-          </p>
+        <h2 className='profile__title'>Last transactions</h2>
+        <div className='profile__container profile__container_history'>
+          {
+            lastTransactions.map((item, index) => {
+              return (
+                <div key={index} className='profile__transactions'>
+                  {/* Change - values */}
+                  <div className='profile__values'>
+                    <p className='profile__values-text'>
+                      Change
+                    </p>
+                    <p className='profile__values-text'>
+                      {item.sendValue} {item.sendType} to {item.resValue} {item.resType}
+                    </p>
+                  </div>
+                  {/* time - status */}
+                  <div className='profile__values'>
+                    {/* time */}
+                    <p className='profile__values-text'>
+                      {item.time}
+                    </p>
+                    {/* status */}
+                    <div className='profile__values-status'>
+                      <p className='profile__values-text'>
+                        {item.img}
+                      </p>
+                      <img className='profile__values-img' alt={item.img} src={image[item.img]}></img>
+                    </div>
+
+                  </div>
+                </div>
+              )
+            })
+          }
+
         </div>
       </div>
     </section>
