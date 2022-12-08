@@ -8,10 +8,15 @@ function InfoCards({ cards = [] }) {
       {cards.map((item, index) => {
         return (
           <div key={index} className='infoCard__card'>
-            <img
-              src={item.img}
-              alt={item.alt}
-            />
+            {/* image */}
+            <div className='infoCard__image'>
+              <img
+                className={item.alt === 'Fast' ? 'infoCard__img_fast' : undefined}
+                src={item.img}
+                alt={item.alt}
+              />
+            </div>
+            {/* content */}
             <div className='infoCard__content'>
               <h3 className='infoCard__title'>
                 {item.title}
