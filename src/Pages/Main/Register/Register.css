@@ -25,11 +25,11 @@
 }
 
 .register__button-password_open {
-  background-image: url(./../../images/eyeOpen.svg);
+  background-image: url(./../../../images/eyeOpen.svg);
 }
 
 .register__button-password_close {
-  background-image: url(./../../images/eyeClose.svg);
+  background-image: url(./../../../images/eyeClose.svg);
 }
 
 .register__form {

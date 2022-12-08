@@ -1,21 +1,16 @@
 
 import './ExchangeBuy.css';
-import BigTitle from '../BigTitle/BigTitle';
-import Field from '../Field/Field';
+import BigTitle from './../../../components/BigTitle/BigTitle.js';
+import Field from './../../../components/Field/Field';
 import { useEffect, useState } from 'react';
-import ChangeButton from '../ChangeButton/ChangeButton';
-import BigButton from '../BigButton/BigButton';
-import useForm from '../../hooks/useForm';
+import ChangeButton from './../../../components/ChangeButton/ChangeButton';
+import BigButton from './../../../components/BigButton/BigButton';
+import useForm from './../../../hooks/useForm.js';
 
-import imgRight from './../../images/Right.svg';
+import imgRight from './../../../images/Right.svg';
 import { NavLink } from 'react-router-dom';
 
-import { CryptoContent } from '../../utils/constants';
-
-import wait from './../../images/icons/waiting.svg';
-import complete from './../../images/icons/complete.svg';
-import error from './../../images/icons/error.svg';
-
+import { CryptoContent, imageWaiting as wait, imagePopupInfoComplete as complete, imageError as error } from './../../../utils/constants.js';
 
 function ExchangeBuy({
   sendValue = 1,

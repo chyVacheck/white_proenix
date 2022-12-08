@@ -1,7 +1,7 @@
 
 import './Policies.css';
-import PoliciesButton from './__button/PoliciesButton';
-import BigTitle from './../BigTitle/BigTitle.js';
+import PoliciesButton from './__button/PoliciesButton.js';
+import BigTitle from './../../../components/BigTitle/BigTitle.js';
 
 function Policies() {
 

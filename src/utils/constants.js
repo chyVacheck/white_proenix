@@ -22,23 +22,17 @@ import imagePopupCryptoUSDTG from './../images/crypto/usdt_gold.svg';
 
 
 //? Pages About us
-import HowItWorks from './../Pages/Footer/HowItWoks';
-
+import { HowItWorks } from './../Pages/Pages.js';
 //? Pages Features
-
+// import { } from './../Pages/Pages.js';
 //? Pages Patrtner with us
-
+// import { } from './../Pages/Pages.js';
 //? Pages Policies
-import TermsOfService from './../Pages/Footer/TermsOfService.js';
-import PrivacyPolicy from './../Pages/Footer/PrivacyPolicy.js';
-import CoockiePolicy from './../Pages/Footer/CoockiePolicy';
-import AMLPolicy from './../Pages/Footer/AMLPolicy.js';
-
+import { TermsOfService, PrivacyPolicy, CoockiePolicy, AMLPolicy } from './../Pages/Pages.js';
 //? Pages Support Center
-
-
+// import { } from './../Pages/Pages.js';
 //? Page in development
-import PageInDevelopment from './../Pages/Info/PageInDevelopment.js';
+import { PageInDevelopment } from './../Pages/Pages.js';
 
 const images = {
   icon: {
@@ -162,5 +156,5 @@ export const formLogin = {
 };
 
 export const inputIsCorrect = 'Input is correct';
-export { CryptoContent, imageWaiting, imageError, images };
+export { CryptoContent, imageWaiting, imageError, images, imagePopupInfoComplete };
 export default Pages;

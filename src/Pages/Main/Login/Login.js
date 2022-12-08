@@ -1,16 +1,16 @@
 
 import './Login.css';
-import BigTitle from './../BigTitle/BigTitle.js';
-import BigButton from '../BigButton/BigButton';
-import Field from '../Field/Field';
+import BigTitle from './../../../components/BigTitle/BigTitle.js';
+import BigButton from './../../../components/BigButton/BigButton.js';
+import Field from './../../../components/Field/Field.js';
 
 //? hook
-import useForm from './../../hooks/useForm.js';
+import useForm from './../../../hooks/useForm.js';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //? for input
-import { handleInput } from '../../utils/FormValidation';
+import { handleInput } from './../../../utils/FormValidation.js';
 
 function Login({ popupValid }) {
 

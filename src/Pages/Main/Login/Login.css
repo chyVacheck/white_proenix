@@ -25,11 +25,11 @@
 }
 
 .login__button-password_open {
-  background-image: url(./../../images/eyeOpen.svg);
+  background-image: url(./../../../images/eyeOpen.svg);
 }
 
 .login__button-password_close {
-  background-image: url(./../../images/eyeClose.svg);
+  background-image: url(./../../../images/eyeClose.svg);
 }
 
 .login__form {

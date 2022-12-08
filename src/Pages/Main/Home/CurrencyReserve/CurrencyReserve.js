@@ -2,7 +2,7 @@
 //? стили
 import './CurrencyReserve.css';
 
-import { CryptoContent } from './../../../utils/constants';
+import { CryptoContent } from './../../../../utils/constants.js';
 
 function CurrencyReserve({
   CurrencyReserve = {

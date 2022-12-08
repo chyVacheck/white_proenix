@@ -1,42 +1,41 @@
 
 import './App.css';
-
 import { Routes, Navigate, Route } from 'react-router-dom';
-//* компоненты
-//? для администрации
-import { AdminLogin } from './../Admin/Admin.js';
-// import AdminPanel from './../Admin/AdminPanel.js';
 
-//? основные
+
+//? основные 
 import Header from './../Header/Header.js';
-import Home from './../Home/Home.js';
-import ExchangeBuy from './../ExchangeBuy/ExchangeBuy';
-import Support from './../Support/Support';
-import Footer from './../Footer/Footer.js';
-import Profile from './../Profile/Profile.js';
 
 //? защита стр
 import ProtecredRouter from './../ProtectedRouter/ProtectedRouter.js';
 
-//? компоненты из Footer
-import Policies from './../Policies/Policies';
+//? компонент Footer
+import Footer from '../Footer/Footer';
 // компоненты из Policies
-import FooterPages from './../FooterPages/FooterPages';
+import FooterPages from './../../components/FooterPages/FooterPages.js';
 
-//? авторизация/регистрация
-import Register from './../Register/Register.js';
-import Login from './../Login/Login.js';
-import MailVerification from './../MailVerification/MailVerification.js';
-
-//? pop-up
+//? pop-up`ы
 import PopupInfo from './../Popup/PopupInfo/PopupInfo.js';
 import PopupCrypto from './../Popup/PopupCrypto/PopupCrypto.js';
 import PopupValid from '../Popup/PopupValid/PopupValid';
 
-//* info pages
-import PageNotFound from './../../Pages/Info/PageNotFound.js';
-import YouAreNotLoggedIn from './../../Pages/Info/YouAreNotLoggedIn.js';
-import PageInDevelopment from '../../Pages/Info/PageInDevelopment';
+//! страницы
+//* main
+import { Home, Support, ExchangeBuy, Profile } from './../../Pages/Pages.js';
+
+//* footer
+import { Policies } from './../../Pages/Pages.js';
+
+//? для администрации
+import { AdminLogin } from './../Admin/Admin.js';
+// import AdminPanel from './../Admin/AdminPanel.js';
+
+//? информационные pages
+import { PageNotFound, YouAreNotLoggedIn, PageInDevelopment } from './../../Pages/Pages.js';
+
+//? авторизация/регистрация
+import { Register, Login, MailVerification } from './../../Pages/Pages.js';
+
 
 //* хуки
 import { useState } from 'react';
@@ -306,6 +305,16 @@ function App() {
           }>
         </Route>
 
+        {/* //? история версий сайта {Site_version_history} */}
+        {/* у вас нет доступа к этой странице {Site_version_history} */}
+        <Route
+          path='/Site_version_history'
+          element={
+            <>
+              {/* <SiteVersionHistory /> */}
+            </>
+          }>
+        </Route>
 
       </Routes>
 

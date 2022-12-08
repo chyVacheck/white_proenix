@@ -1,18 +1,19 @@
 
 import './Home.css';
-import BigTitle from './../BigTitle/BigTitle.js';
-import BigButton from './../BigButton/BigButton.js';
-import CurrencyReserve from './CurrencyReserve/CurrencyReserve.js';
-import Field from './../Field/Field.js';
-import ChangeButton from '../ChangeButton/ChangeButton';
-import InfoCards from '../InfoCards/InfoCards.js'
+import BigTitle from './../../../components/BigTitle/BigTitle.js';
+import BigButton from './../../../components/BigButton/BigButton.js';
+import Field from './../../../components/Field/Field.js';
+import ChangeButton from './../../../components/ChangeButton/ChangeButton.js';
+import InfoCards from './../../../components/InfoCards/InfoCards.js'
+//? 
 import Reviews from './Reviews/Reviews.js';
+import CurrencyReserve from './CurrencyReserve/CurrencyReserve.js';
 
 //? images for cards info
-import imgBuy from './../../images/cardsInfo/Buy.png';
-import imgSupport from './../../images/cardsInfo/Support.png';
-import imgFast from './../../images/icons/waiting.svg';
-import imgSecurity from './../../images/cardsInfo/Safe.png';
+import imgBuy from './../../../images/cardsInfo/Buy.png';
+import imgSupport from './../../../images/cardsInfo/Support.png';
+import imgFast from './../../../images/icons/waiting.svg';
+import imgSecurity from './../../../images/cardsInfo/Safe.png';
 
 import { useNavigate } from 'react-router-dom';
 
