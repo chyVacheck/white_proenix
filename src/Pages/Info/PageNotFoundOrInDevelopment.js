@@ -1,11 +1,11 @@
 
 import Pages from './Pages.js';
-import src from './../../images/cardsInfo/Fast.svg';
+import  { imageWaiting } from './../../utils/constants.js';
 
 function PageNotFoundOrInDevelopment() {
 
   const img = {
-    src: src,
+    src: imageWaiting,
     alt: 'waiting',
   }
 
