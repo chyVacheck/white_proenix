@@ -17,23 +17,25 @@ function Table({ Coockie = [] }) {
         {
           Coockie.map((item, index) => {
             return (
-              <tr key={index} className='table__row'>
-                <td className='table__name table__cell'>
-                  {item.name}
-                </td>
-                <td className='table__type table__cell'>
-                  {item.type}
-                </td>
-                <td className='table__party table__cell'>
-                  {item.party}
-                </td>
-                <td className='table__target table__cell'>
-                  {item.target}
-                </td>
-                <td className='table__period table__cell'>
-                  {item.period}
-                </td>
-              </tr>
+              <tbody key={index}>
+                <tr className='table__row'>
+                  <td className='table__name table__cell'>
+                    {item.name}
+                  </td>
+                  <td className='table__type table__cell'>
+                    {item.type}
+                  </td>
+                  <td className='table__party table__cell'>
+                    {item.party}
+                  </td>
+                  <td className='table__target table__cell'>
+                    {item.target}
+                  </td>
+                  <td className='table__period table__cell'>
+                    {item.period}
+                  </td>
+                </tr>
+              </tbody>
             )
           })}
 
