@@ -1,15 +1,23 @@
 
 import './InfoCards.css';
+import { useNavigate } from 'react-router-dom';
 
 function InfoCards({ cards = [] }) {
+
+  const navigate = useNavigate();
 
   return (
     <article className='infoCards'>
       {cards.map((item, index) => {
+
+        function onClick() {
+          navigate(item.link);
+        }
+
         return (
           <div key={index} className='infoCard__card'>
             {/* image */}
-            <div className='infoCard__image'>
+            <div onClick={item.link ? onClick : undefined} className={item.link ? 'infoCard__image infoCard_link' : 'infoCard__image'}>
               <img
                 className={item.alt === 'Fast' ? 'infoCard__img_fast' : undefined}
                 src={item.img}
