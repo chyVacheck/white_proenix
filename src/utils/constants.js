@@ -133,6 +133,22 @@ const CryptoContent = {
   }
 }
 
+export const errorMesages = {
+  tooShort: 'Input is too short',
+  tooLong: 'Input is too long',
+  typeMismatchUrl: 'Enter the link to the image',
+  valueMissing: 'It remains to fill in',
+  rangeUnderflow: 'You need to enter a number greater than now',
+  rangeOverflow: 'You need to enter a number less than now',
+  typeMismatchEmail: 'You need to enter the email',
+}
 
+export const formLogin = {
+  inputSelector: '.field__input',
+  submitButtonSelector: '#sign-in-submit-button',
+  buttonClass: 'button',
+};
+
+export const inputIsCorrect = 'Input is correct';
 export { CryptoContent, imageWaiting, images };
 export default Pages;
