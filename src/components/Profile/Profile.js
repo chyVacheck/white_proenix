@@ -1,26 +1,19 @@
 
 import './Profile.css';
 
-import error from './../../images/icons/error.svg';
-import waiting from './../../images/icons/waiting.svg';
-import complete from './../../images/icons/complete.svg';
+import { images } from '../../utils/constants';
 
 import star from './../../images/reviews/Star.svg';
-import user_img from './../../images/User_black.svg';
+import user_img from './../../images/user/User_black.svg';
 import { useEffect, useState } from 'react';
 
-const image = {
-  'complete': complete,
-  'waiting': waiting,
-  'error': error,
-}
 
 function Profile({
   currentUser = {
     fullName: { text: 'Viktor Barinov' },
-    country: { text: 'Russian Federation', src: error, alt: 'error' },
-    adress: { text: 'Moscow, Pushkina st. 15', src: waiting, alt: 'waiting' },
-    mail: { text: 'email@mail.ru', src: complete, alt: 'complete' },
+    country: { text: 'Russian Federation', src: 'error', alt: 'error' },
+    adress: { text: 'Moscow, Pushkina st. 15', src: 'waiting', alt: 'waiting' },
+    mail: { text: 'email@mail.ru', src: 'complete', alt: 'complete' },
     level: 4,
     limit: {
       current: 7.523,
@@ -122,17 +115,17 @@ function Profile({
             {/* Country */}
             <div className='profile__container__general-info-block'>
               <p className='profile__container__general-info'>Country</p>
-              <p className='profile__container__general-info' >{currentUser.country.text} <img className='profile__container__general-img' src={currentUser.country.src} alt={currentUser.country.alt} /></p>
+              <p className='profile__container__general-info' >{currentUser.country.text} <img className='profile__container__general-img' src={images.icon[currentUser.country.src]} alt={currentUser.country.alt} /></p>
             </div>
             {/* Adress*/}
             <div className='profile__container__general-info-block'>
               <p className='profile__container__general-info'>Adress</p>
-              <p className='profile__container__general-info' >{currentUser.adress.text} <img className='profile__container__general-img' src={currentUser.adress.src} alt={currentUser.adress.alt} /></p>
+              <p className='profile__container__general-info' >{currentUser.adress.text} <img className='profile__container__general-img' src={images.icon[currentUser.adress.src]} alt={currentUser.adress.alt} /></p>
             </div>
             {/* Mail */}
             <div className='profile__container__general-info-block'>
               <p className='profile__container__general-info'>Mail</p>
-              <p className='profile__container__general-info' >{currentUser.mail.text} <img className='profile__container__general-img' src={currentUser.mail.src} alt={currentUser.mail.alt} /></p>
+              <p className='profile__container__general-info' >{currentUser.mail.text} <img className='profile__container__general-img' src={images.icon[currentUser.mail.src]} alt={currentUser.mail.alt} /></p>
             </div>
           </div>
         </div>
@@ -157,7 +150,7 @@ function Profile({
 
             {/* Verification complete */}
             <div className='profile__container-verification'>
-              Verification complete <img className='profile__container__verification-img' src={complete} alt={''} />
+              Verification complete <img className='profile__container__verification-img' src={images.icon.complete} alt={images.alt.complete} />
             </div>
           </div>
         </div>
@@ -191,7 +184,7 @@ function Profile({
                       <p className='profile__values-text'>
                         {item.img}
                       </p>
-                      <img className='profile__values-img' alt={item.img} src={image[item.img]}></img>
+                      <img className='profile__values-img' alt={item.img} src={images.icon[item.img]}></img>
                     </div>
 
                   </div>

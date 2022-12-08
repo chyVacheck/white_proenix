@@ -134,5 +134,5 @@ const CryptoContent = {
 }
 
 
-export { CryptoContent, imageWaiting };
+export { CryptoContent, imageWaiting, images };
 export default Pages;
