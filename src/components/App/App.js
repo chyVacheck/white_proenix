@@ -34,7 +34,7 @@ import PopupCrypto from './../Popup/PopupCrypto/PopupCrypto.js';
 import PopupValid from '../Popup/PopupValid/PopupValid';
 
 //* info pages
-import PageNotFoundOrInDevelopment from './../../Pages/Info/PageNotFoundOrInDevelopment.js';
+import PageNotFound from './../../Pages/Info/PageNotFound.js';
 import YouAreNotLoggedIn from './../../Pages/Info/YouAreNotLoggedIn.js';
 
 //* хуки
@@ -242,7 +242,6 @@ function App() {
 
         {/* //? из footer */}
         <Route
-          exact
           path='/:path/:path_second'
           element={
             <FooterPages />
@@ -263,17 +262,17 @@ function App() {
         <Route
           path="*"
           element={
-            <Navigate to="/Page_Not_Found_Or_In_Development" />
+            <Navigate to="/Page_Not_Found" />
           }>
         </Route>
 
         {/* //? Info Pages */}
         {/* Страницы нет или в разработке {Page_Not_Found_Or_In_Development} */}
         <Route
-          path='/Page_Not_Found_Or_In_Development'
+          path='/Page_Not_Found'
           element={
             <>
-              <PageNotFoundOrInDevelopment />
+              <PageNotFound />
             </>
           }>
         </Route>
