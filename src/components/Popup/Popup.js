@@ -1,24 +1,26 @@
 import './Popup.css';
 
-function Popup({ name, isOpen, setIsOpen, children, ...props }) {
+function Popup({ small, name, isOpen, setIsOpen, children, ...props }) {
 
   function onClose() {
     setIsOpen(false);
   }
-
-  const className = props.className + " popup__container"
+  
+  const classPopup = small ? 'popup popup-small' : 'popup';
+  const classButton = small ? 'popup-small__close-button popup__close-button button' : 'popup__close-button button';
+  const classContainer = props.className + " popup__container";
 
   return (
-    <section id={`popup-${name}`} className={isOpen ? 'popup popup_opened' : 'popup'}>
-      <article id={`popup-container`} className={className}>
+    <section id={`popup-${name}`} className={isOpen ? classPopup + ' popup_opened' : classPopup}>
+      <article onClick={small ? onClose : undefined} id={`popup-container`} className={classContainer}>
         {children}
         <button
           aria-label="закрыть окно pop-up"
           type="button"
           id={`popup-button-close`}
-          className="popup__close-button button"
+          className={classButton}
           onClick={onClose}
-        ></button>
+        />
       </article>
     </section>
   )

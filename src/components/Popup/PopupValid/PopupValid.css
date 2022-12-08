@@ -1,0 +1,27 @@
+.popupValid {
+  padding: 10px;
+  flex-direction: row;
+  column-gap: 15px;
+  border: 1px solid yellow;
+  cursor: pointer;
+}
+
+.popupValid_error {
+  border: 1px solid red;
+}
+
+.popupValid_complete {
+  border: 1px solid green;
+}
+
+.popupValid__image {
+  width: 30px;
+  height: 30px;
+}
+
+.popupValid__message {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
