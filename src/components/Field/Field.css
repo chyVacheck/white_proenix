@@ -30,6 +30,16 @@
   border: #282828 1px solid;
 }
 
+.field__input:focus-visible {
+  border: #fff 1px solid;
+  outline: none;
+  caret-color: #fff;
+}
+
+.field__input:valid {
+  border: green 1px solid;
+}
+
 .field__input_big {
   height: 60px;
 }
@@ -37,12 +47,6 @@
 .field__input_adress {
   width: 100%;
   max-width: 400px;
-}
-
-.field__input:focus-visible {
-  border: #fff 1px solid;
-  outline: none;
-  caret-color: #fff;
 }
 
 .field__input::-webkit-outer-spin-button,
