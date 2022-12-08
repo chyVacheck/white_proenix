@@ -9,6 +9,8 @@ function HowItWorks() {
 
   const name = 'How it works';
 
+  window.scrollTo(0, 0);
+
   return (
     <section className='footerPages'>
       <BigTitle id='how-it-works'>

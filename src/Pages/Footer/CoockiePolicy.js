@@ -8,6 +8,8 @@ import Table from './../../components/FooterPages/Table/Table.js';
 
 function CoockiePolicy() {
 
+  window.scrollTo(0, 0);
+
   return (
     <section className='footerPages'>
       <BigTitle id='coockie-policy'>
@@ -16,27 +18,28 @@ function CoockiePolicy() {
 
       <article className='footerPages__container'>
         <LastUpdate data='august 2022'>
-          <List
-            textBefore={<Paragrafs
-              paragrafs={[
-                'We use Cookies to enhance the experience of our users and make our Services more convenient, for security, and to analyze our traffic. Cookies are small data files, which may include an anonymous unique identifier, that is sent to your browser from the website and stored on your computer`s hard drive.',
-                'We use cookies to recognize your browser or device, provide you with essential features and services and for additional purposes, including:'
-              ]}
-            />}
-            list={[
-              'Recognizing you when you sign-in to use our services;',
-              'Enhance experience;',
-              'Improving security;',
-              'Preventing fraudulent activity;',
-              'Tracking agreement to the Services;',
-              'Reporting. This allows us to measure and analyze the performance of our services;',
-              'Analytic practices that help us understand your activities on our Services.'
-            ]}
-            textAfter={<Paragrafs
-              paragrafs={['We use the following cookies on or in relation to our website:']}
-            />}
-          />
+          We use Cookies to enhance the experience of our users and make our Services more convenient, for security, and to analyze our traffic. Cookies are small data files, which may include an anonymous unique identifier, that is sent to your browser from the website and stored on your computer`s hard drive.
         </LastUpdate>
+
+        <List
+          textBefore={<Paragrafs
+            paragrafs={[
+              'We use cookies to recognize your browser or device, provide you with essential features and services and for additional purposes, including:'
+            ]}
+          />}
+          list={[
+            'Recognizing you when you sign-in to use our services;',
+            'Enhance experience;',
+            'Improving security;',
+            'Preventing fraudulent activity;',
+            'Tracking agreement to the Services;',
+            'Reporting. This allows us to measure and analyze the performance of our services;',
+            'Analytic practices that help us understand your activities on our Services.'
+          ]}
+          textAfter={<Paragrafs
+            paragrafs={['We use the following cookies on or in relation to our website:']}
+          />}
+        />
 
         <Table
           Coockie={[

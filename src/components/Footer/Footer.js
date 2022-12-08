@@ -39,7 +39,7 @@ function Footer() {
         </div>
         {/* //? копирайт */}
         <div className='footer__copyright-container'>
-          <p className='footer__copyright-title'>© {year} Wphoenix.com. All rights reserved</p>
+          <p className='footer__copyright-title'>© {year} Phoenixw.com. All rights reserved</p>
         </div>
       </article>
     </footer>

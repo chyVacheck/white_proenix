@@ -11,7 +11,7 @@ function PrivacyPolicy() {
 
   const name = 'Privacy Policy';
 
-
+  window.scrollTo(0, 0);
 
   return (
     <section className='footerPages'>
@@ -21,17 +21,18 @@ function PrivacyPolicy() {
 
       <article className='footerPages__container'>
         <LastUpdate data='june 2022'>
-          <Paragrafs
-            paragrafs={[
-              'In WhitePhoenix, we respect your privacy so we make serious efforts to protect it, prevent any type of personal information misuse as well as make sure that the collection and processing are always done with transparency and responsibility while keeping you in absolute control at all times.',
-              'By using our website (https://wphoenix.com), ("Website"), our application programming interface (https://api.wphoenix.com), ("API"), or our mobile application, ("Mobile App"), all referred to as ("Services" or "Service") we may collect, or you may voluntarily provide us with information.',
-              'This Privacy Policy is in accordance with the EU General Data Protection Regulation 2018 ("GDPR") and has the intention to acknowledge you what information we may collect about you or you may provide us with, why do we collect such information, how do we process them, with whom we may share them and under which circumstances, how do we protect them, and how you can update, manage, export, and delete your information making use of your rights which we also demonstrate.',
-              'With the term, "Information", as it is used in this Privacy Policy is meant any type of information that, will enable your direct or indirect specification by using various identifiers that we may collect or you may voluntarily provide us with, such as your name, your email address, your IP address or any other method or information that may be used in order to specify you.',
-              'Any use of the Services mirrors your acceptance to this Privacy Policy so please read it carefully and if you do not agree you should avoid/stop using any of the Services provided by us. If you have any questions, please contact us at support@wphoenix.com.'
-
-            ]} />
+          In WhitePhoenix, we respect your privacy so we make serious efforts to protect it, prevent any type of personal information misuse as well as make sure that the collection and processing are always done with transparency and responsibility while keeping you in absolute control at all times.
         </LastUpdate>
 
+        <Paragrafs
+          paragrafs={[
+            'In WhitePhoenix, we respect your privacy so we make serious efforts to protect it, prevent any type of personal information misuse as well as make sure that the collection and processing are always done with transparency and responsibility while keeping you in absolute control at all times.',
+            'By using our website (https://phoenixw.com), ("Website"), our application programming interface (https://api.phoenixw.com), ("API"), or our mobile application, ("Mobile App"), all referred to as ("Services" or "Service") we may collect, or you may voluntarily provide us with information.',
+            'This Privacy Policy is in accordance with the EU General Data Protection Regulation 2018 ("GDPR") and has the intention to acknowledge you what information we may collect about you or you may provide us with, why do we collect such information, how do we process them, with whom we may share them and under which circumstances, how do we protect them, and how you can update, manage, export, and delete your information making use of your rights which we also demonstrate.',
+            'With the term, "Information", as it is used in this Privacy Policy is meant any type of information that, will enable your direct or indirect specification by using various identifiers that we may collect or you may voluntarily provide us with, such as your name, your email address, your IP address or any other method or information that may be used in order to specify you.',
+            'Any use of the Services mirrors your acceptance to this Privacy Policy so please read it carefully and if you do not agree you should avoid/stop using any of the Services provided by us. If you have any questions, please contact us at support@phoenixw.com.'
+
+          ]} />
 
         <Title id={`${name} 1`}>
           1. Collected Information
@@ -84,7 +85,7 @@ function PrivacyPolicy() {
           list={[
             'For internal business intelligence purposes, to conduct research, product development, and enhancement;',
             'To inform you of changes made to our Services;',
-            'For promotional purposes, we may send out emails to your email address. You may unsubscribe from receiving these emails by following the instructions included in these emails, or by contacting us at support@wphoenix.com;',
+            'For promotional purposes, we may send out emails to your email address. You may unsubscribe from receiving these emails by following the instructions included in these emails, or by contacting us at support@phoenixw.com;',
             'To ensure that content from our Service is presented most effectively for you and your computer; To display content based on your interests;',
             'To respond to your questions and provide related customer services;',
             'To confirm your identity when and if such procedure may be a requirement;',
@@ -131,8 +132,8 @@ function PrivacyPolicy() {
           paragrafs={[
             'For us, maintaining your privacy and avoiding misuse or unauthorized disclosure of your information is a priority, which is why in WhitePhoenix, with absolute responsibility to its` users and their rights, apply various technical, physical and administrative safeguards in order to protect the security and confidentiality of the information you entrust us with.',
             'We will store your information, in a form that permits us to identify you, for no longer than is necessary for the purpose for which the information is processed. We maintain your information only for as long as it is necessary to comply with our legal obligations, resolve disputes, enforce our agreements and rights, or if it is not technically and reasonably feasible to remove it, and for any other reason as they are described in the sections above.',
-            'After your relevant request, we will erase your information without undue delay with respect to your rights as they are described further below in your rights section of this Privacy Policy. To request your information erasure, please contact us at support@wphoenix.com.',
-            'Furthermore, we cannot ensure or warrant the security or confidentiality of the information you transmit to us or receive from us by Internet or wireless connection, including email, phone, or SMS, since we have no way of protecting that information once it leaves and until it reaches us. If you have any reason to believe that your data is no longer secure, please contact us at support@wphoenix.com.'
+            'After your relevant request, we will erase your information without undue delay with respect to your rights as they are described further below in your rights section of this Privacy Policy. To request your information erasure, please contact us at support@phoenixw.com.',
+            'Furthermore, we cannot ensure or warrant the security or confidentiality of the information you transmit to us or receive from us by Internet or wireless connection, including email, phone, or SMS, since we have no way of protecting that information once it leaves and until it reaches us. If you have any reason to believe that your data is no longer secure, please contact us at support@phoenixw.com.'
 
           ]}
         />
@@ -193,7 +194,7 @@ function PrivacyPolicy() {
           textAfter={<Paragrafs
             paragrafs={[
               'The aforementioned conditions are void in case processing is necessary for compliance with a legal obligation which requires processing by Union or Member State law to which we are subject, or for the performance of a task carried out in the public interest, or in the exercise of official authority vested in us, for the establishment, exercise or defense of legal claims, and other exceptions enumerated in article 17, paragraph 3 of GDPR. The legal basis is Art. 17, GDPR.',
-              'In order to request erasure of your personal information, please navigate to the settings of your account`s dashboard, and deactivate your account by pressing the "Deactivate account" button. By deactivating your account you withdraw your consent with our Terms of Service and your account is restricted for further usage. Following the account deactivation, you may contact us at support@wphoenix.com with the subject "Information Erasure" and request to erase your personal information.'
+              'In order to request erasure of your personal information, please navigate to the settings of your account`s dashboard, and deactivate your account by pressing the "Deactivate account" button. By deactivating your account you withdraw your consent with our Terms of Service and your account is restricted for further usage. Following the account deactivation, you may contact us at support@phoenixw.com with the subject "Information Erasure" and request to erase your personal information.'
             ]}
           />}
         />
@@ -306,7 +307,7 @@ function PrivacyPolicy() {
 
         <Paragrafs
           paragrafs={[
-            'If you have any questions regarding our policy or privacy practices, please contact us at support@wphoenix.com.'
+            'If you have any questions regarding our policy or privacy practices, please contact us at support@phoenixw.com.'
           ]}
         />
 
