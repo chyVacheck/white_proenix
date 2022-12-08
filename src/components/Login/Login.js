@@ -9,7 +9,10 @@ import useForm from './../../hooks/useForm.js';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Login() {
+//? for input
+import { handleInput } from '../../utils/FormValidation';
+
+function Login({ popupValid }) {
 
   const [showPass, setShowPass] = useState(false);
 
@@ -24,6 +27,11 @@ function Login() {
     setShowPass(!showPass);
   }
 
+  function handleChangeInput(event) {
+    handleInput(event, popupValid);
+    handleChange(event);
+  }
+
   return (
     <article className='login'>
       <BigTitle id='sign-in'>
@@ -35,7 +43,7 @@ function Login() {
           inputName={'email'}
           fieldName='Email Address'
           value={values.email}
-          handleChange={handleChange}
+          handleChange={handleChangeInput}
           minLength={null}
           maxLength={null}
           type='email'
@@ -44,13 +52,14 @@ function Login() {
           inputName={'password'}
           fieldName='Password'
           value={values.password}
-          handleChange={handleChange}
-          minLength={3}
-          maxLength={15}
+          handleChange={handleChangeInput}
+          minLength={8}
+          maxLength={16}
           type='password'
           showPass={showPass}
         >
           <button
+            id='sign-in-submit-button'
             className={classNameShowPass}
             type='button'
             onClick={changeVisibilitiPassword} />

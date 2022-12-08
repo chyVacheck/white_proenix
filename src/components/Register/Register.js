@@ -8,9 +8,9 @@ import Field from '../Field/Field';
 import useForm from './../../hooks/useForm.js';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { handleInput } from '../../utils/FormValidation';
 
-
-function Register() {
+function Register({ popupValid }) {
 
   const [showPass, setShowPass] = useState(false);
 
@@ -26,6 +26,11 @@ function Register() {
     setShowPass(!showPass);
   }
 
+  function handleChangeInput(event) {
+    handleInput(event, popupValid);
+    handleChange(event);
+  }
+
   return (
     <article className='register'>
       <BigTitle id='sign-up'>
@@ -37,7 +42,7 @@ function Register() {
             inputName={'email'}
             fieldName='Email Address'
             value={values.email}
-            handleChange={handleChange}
+            handleChange={handleChangeInput}
             minLength={null}
             maxLength={null}
             type='email'
@@ -46,9 +51,9 @@ function Register() {
             inputName={'password'}
             fieldName='Password'
             value={values.password}
-            handleChange={handleChange}
-            minLength={3}
-            maxLength={15}
+            handleChange={handleChangeInput}
+            minLength={8}
+            maxLength={16}
             type='password'
             showPass={showPass}
           >
