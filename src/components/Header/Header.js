@@ -13,7 +13,7 @@ import HeaderButton from './__button/HeaderButton.js';
 //? вспомогательны
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-function Header({ currentEmail, isLogined = false }) {
+function Header({ currentID, isLogined = false }) {
 
   const navigate = useNavigate();
   let location = useLocation();
@@ -51,7 +51,7 @@ function Header({ currentEmail, isLogined = false }) {
       <div className='header__email-button'>
         {isLogined ?
           <div onClick={onClick} className='header__email'>
-            {currentEmail}
+            {currentID}
             <img className='header__email-icon' alt='user icon' src={userIcon} />
           </div> :
           <HeaderButton

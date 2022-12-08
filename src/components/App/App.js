@@ -36,6 +36,7 @@ import PopupValid from '../Popup/PopupValid/PopupValid';
 //* info pages
 import PageNotFound from './../../Pages/Info/PageNotFound.js';
 import YouAreNotLoggedIn from './../../Pages/Info/YouAreNotLoggedIn.js';
+import PageInDevelopment from '../../Pages/Info/PageInDevelopment';
 
 //* хуки
 import { useState } from 'react';
@@ -49,7 +50,7 @@ function App() {
 
   const [isLogined, setIsLogined] = useState(false);
   window.setIsLogined = ((value) => { setIsLogined(value) });
-  const [currentEmail, setCurrentEmail] = useState('email@mail.ru');
+  const [currentID, setCurrentID] = useState('email@mail.ru');
 
   //* State for PopupInfo
   const [isPopupInfoImage, setIsPopupInfoImage] = useState(popupInfoContent.images.icon.waiting);
@@ -96,7 +97,7 @@ function App() {
 
   function logOf() {
     setIsLogined(false);
-    setCurrentEmail('');
+    setCurrentID('');
   }
 
   return (
@@ -104,7 +105,7 @@ function App() {
 
       {/*//? шапка сайта, блок header */}
       <Header
-        currentEmail={currentEmail}
+        currentID={currentID}
         isLogined={isLogined}
         buttonLink='login'
       />
@@ -192,11 +193,13 @@ function App() {
           }>
         </Route>
 
-        {/* покупка и обмен {exhange_&_Buy} */}
+        {/* покупка и обмен {Exhange_&_Buy} */}
         <Route
           path='/Exchange_&_Buy'
           element={
-            <>
+            <ProtecredRouter
+              loggedIn={isLogined}
+            >
               <ExchangeBuy
                 sendValue={sendValues.sendPrice}
                 sendValueType={sendValues.sendType}
@@ -212,7 +215,7 @@ function App() {
 
                 logOf={logOf}
               />
-            </>
+            </ProtecredRouter>
           }>
         </Route>
 
@@ -226,7 +229,9 @@ function App() {
           }>
         </Route>
 
-        {/* поодержка {Profile} */}
+        {/* //? из Profile */}
+
+        {/* профиль {Profile} */}
         <Route
           path='/Profile'
           element={
@@ -235,6 +240,20 @@ function App() {
                 loggedIn={isLogined}
               >
                 <Profile />
+              </ProtecredRouter>
+            </>
+          }>
+        </Route>
+
+        {/* профиль {Profile} */}
+        <Route
+          path='/Profile/History'
+          element={
+            <>
+              <ProtecredRouter
+                loggedIn={isLogined}
+              >
+                <PageInDevelopment />
               </ProtecredRouter>
             </>
           }>
@@ -267,7 +286,7 @@ function App() {
         </Route>
 
         {/* //? Info Pages */}
-        {/* Страницы нет или в разработке {Page_Not_Found_Or_In_Development} */}
+        {/* Страницы нет или в разработке {Page_Not_Found} */}
         <Route
           path='/Page_Not_Found'
           element={
@@ -310,6 +329,7 @@ function App() {
         setCurrentCrypto={sendPopup ? setSendCrypto : setResultingCrypto}
       />
 
+      {/* PopupValid */}
       <PopupValid
         isOpen={isPopupValidOpen}
         setIsOpen={setIsPopupValidOpen}
