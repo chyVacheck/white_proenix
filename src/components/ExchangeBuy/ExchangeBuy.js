@@ -7,7 +7,7 @@ import ChangeButton from '../ChangeButton/ChangeButton';
 import BigButton from '../BigButton/BigButton';
 import useForm from '../../hooks/useForm';
 
-import img from './../../images/Right.svg';
+import imgRight from './../../images/Right.svg';
 import { NavLink } from 'react-router-dom';
 
 import { CryptoContent } from '../../utils/constants';
@@ -293,7 +293,7 @@ function ExchangeBuy({
             </Field>
             <img
               alt='>>>'
-              src={img}
+              src={imgRight}
             />
             <Field
               className={'field__input_adress field__input_big'}
