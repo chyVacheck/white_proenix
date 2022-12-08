@@ -1,7 +1,7 @@
 
 //? картинка
-import logo from './../../images/Logo.svg';
-import userIcon from './../../images/Union.svg';
+import logo from './../../images/Logo.png';
+import userIcon from './../../images/user/User.svg';
 
 //? стили
 import './Header.css';
