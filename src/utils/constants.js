@@ -37,6 +37,9 @@ import AMLPolicy from './../Pages/Footer/AMLPolicy.js';
 //? Pages Support Center
 
 
+//? Page in development
+import PageInDevelopment from './../Pages/Info/PageInDevelopment.js';
+
 const images = {
   icon: {
     complete: imagePopupInfoComplete,
@@ -59,19 +62,28 @@ export const popupInfoContent = {
   }
 }
 
-const Pages = {
+const Pages = { //todo добавить остальные страницы
+  //? About us
   '/About_us/How_it_works': <HowItWorks />,
-  '/About_us/Fees': '',
-
-
-
+  '/About_us/Fees': <PageInDevelopment />,
+  //? Features
+  '/Features/Exchange': <PageInDevelopment />,
+  '/Features/VPM': <PageInDevelopment />,
+  '/Features/Live_Prices': <PageInDevelopment />,
+  //? Patrtner with us
+  '/Patrtner_with_us/Integrate_our_API': <PageInDevelopment />,
+  '/Patrtner_with_us/Become_an_Affiliate': <PageInDevelopment />,
+  '/Patrtner_with_us/Share_your_proposal': <PageInDevelopment />,
+  '/Patrtner_with_us/Start_your_career': <PageInDevelopment />,
+  //? Policies
   '/Policies/Terms_of_Service': <TermsOfService />,
   '/Policies/Privacy_Policy': <PrivacyPolicy />,
   '/Policies/Coockie_Policy': <CoockiePolicy />,
   '/Policies/AML_Policy': <AMLPolicy />,
-
-
-
+  //? Support Center
+  '/Support_Center/Explore_FAQ': <PageInDevelopment />,
+  '/Support_Center/Contact_Us': <PageInDevelopment />,
+  '/Support_Center/Sent_Feedback': <PageInDevelopment />,
 }
 
 const CryptoContent = {
@@ -150,5 +162,5 @@ export const formLogin = {
 };
 
 export const inputIsCorrect = 'Input is correct';
-export { CryptoContent, imageWaiting, images };
+export { CryptoContent, imageWaiting, imageError, images };
 export default Pages;
