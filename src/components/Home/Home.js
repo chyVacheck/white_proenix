@@ -14,6 +14,8 @@ import imgSupport from './../../images/cardsInfo/Support.png';
 import imgFast from './../../images/icons/waiting.svg';
 import imgSecurity from './../../images/cardsInfo/Safe.png';
 
+import { useNavigate } from 'react-router-dom';
+
 function Home({
   sendValue = 1,
   sendValueInputName = '',
@@ -27,6 +29,12 @@ function Home({
   setResultingCrypto,
 
 }) {
+
+  const navigate = useNavigate();
+
+  function onClick() {
+    navigate('/Exchange_&_Buy');
+  }
 
   return (
     <section className='home'>
@@ -45,6 +53,7 @@ function Home({
         </h2>
 
         <BigButton
+          func={onClick}
           sizeBig={true}
           type={'button'}
         >
@@ -101,7 +110,9 @@ function Home({
               Current Rate: <span className='currentRate__rate'>{sendValue} {sendCrypto.alt} = {resulValue} {resultingCrypto.alt} </span>
             </p>
 
-            <BigButton type='submit'>
+            <BigButton
+              func={onClick}
+              type='button'>
               Exchange
             </BigButton>
           </form>
@@ -112,18 +123,21 @@ function Home({
         <InfoCards
           cards={[
             {
+              link: '/Exchange_&_Buy',
               alt: 'Buy',
               img: imgBuy,
               title: 'Low Fees',
               message: 'Not only we offer a 0.2% fee, but we also reward you with a volume oriented fee structure, to take it as low as 0.1%'
             },
             {
+              link: '/Support',
               alt: 'Support',
               img: imgSupport,
               title: 'Support',
               message: 'Our 24/7 support team, composed by crypto experts is committed to resolve any issues than an hour.'
             },
             {
+              link: '/Profile/History',
               alt: 'Fast',
               img: imgFast,
               title: 'Fast',
