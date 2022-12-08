@@ -9,10 +9,10 @@ import InfoCards from '../InfoCards/InfoCards.js'
 import Reviews from './Reviews/Reviews.js';
 
 //? images for cards info
-import imgBuy from './../../images/cardsInfo/Buy.svg';
-import imgSupport from './../../images/cardsInfo/Support.svg';
-import imgFast from './../../images/cardsInfo/Fast.svg';
-import imgSecurity from './../../images/cardsInfo/Safe.svg';
+import imgBuy from './../../images/cardsInfo/Buy.png';
+import imgSupport from './../../images/cardsInfo/Support.png';
+import imgFast from './../../images/icons/waiting.svg';
+import imgSecurity from './../../images/cardsInfo/Safe.png';
 
 function Home({
   sendValue = 1,
