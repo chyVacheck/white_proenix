@@ -8,7 +8,7 @@ import comas from './../../../images/reviews/Comas.svg';
 
 import { useState } from 'react';
 
-function Reviews({ reviews = [] }) {
+function Reviews({ reviews }) {
 
   const [leftReview, setLeftReview] = useState(reviews[0]);
   const [rightReview, setRightReview] = useState(reviews[1]);
