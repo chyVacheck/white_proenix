@@ -18,12 +18,12 @@ function CurrencyReserve({
 }) {
 
   const onClick = {
-    BTC: (() => { setResultingCrypto(CryptoContent.BTC) }),
-    MATIC: (() => { setResultingCrypto(CryptoContent.MATIC) }),
-    NEXO: (() => { setResultingCrypto(CryptoContent.NEXO) }),
-    USDT: (() => { setResultingCrypto(CryptoContent.USDT) }),
-    ETH: (() => { setResultingCrypto(CryptoContent.ETH) }),
-    BNB: (() => { setResultingCrypto(CryptoContent.BNB) }),
+    BTC: (() => { setResultingCrypto(CryptoContent.BTC); window.scroll(0, 650) }),
+    MATIC: (() => { setResultingCrypto(CryptoContent.MATIC); window.scroll(0, 650) }),
+    NEXO: (() => { setResultingCrypto(CryptoContent.NEXO); window.scroll(0, 650) }),
+    USDT: (() => { setResultingCrypto(CryptoContent.USDT); window.scroll(0, 650) }),
+    ETH: (() => { setResultingCrypto(CryptoContent.ETH); window.scroll(0, 650) }),
+    BNB: (() => { setResultingCrypto(CryptoContent.BNB); window.scroll(0, 650) }),
   }
 
   return (
