@@ -31,6 +31,7 @@ import MailVerification from './../MailVerification/MailVerification.js';
 //? pop-up
 import PopupInfo from './../Popup/PopupInfo/PopupInfo.js';
 import PopupCrypto from './../Popup/PopupCrypto/PopupCrypto.js';
+import PopupValid from '../Popup/PopupValid/PopupValid';
 
 //* info pages
 import PageNotFoundOrInDevelopment from './../../Pages/Info/PageNotFoundOrInDevelopment.js';
@@ -59,7 +60,14 @@ function App() {
   //* State for PopupCrypto
   const [isPopupCryptoOpen, setIsPopupCryptoOpen] = useState(false);
 
-  //* State for Exchange in home
+  //* State for PopupValid
+  const [isPopupValidOpen, setIsPopupValidOpen] = useState(false);
+  const [imagePopupValid, setImagePopupValid] = useState(popupInfoContent.images.icon.waiting);
+  const [altPopupValid, setAltPopupValid] = useState(popupInfoContent.images.alt.waiting);
+  const [messagePopupValid, setMessagePopupValid] = useState('Waiting Validation');
+
+
+  //*? State for Exchange in home
   const [sendCrypto, setSendCrypto] = useState(CryptoContent.USDT);
   const [resultingCrypto, setResultingCrypto] = useState(CryptoContent.BTC);
 
@@ -103,7 +111,7 @@ function App() {
 
       <Routes>
 
-        {/* админ панель {AdminPanel} */}
+        {/* ввоод пароля для админки {Admin} */}
         <Route
           exact
           path="/Admin"
@@ -112,8 +120,7 @@ function App() {
           }>
         </Route>
 
-
-        {/* основной контент {home} */}
+        {/* основной контент {/Home} */}
         <Route
           exact
           path="/Home"
@@ -146,7 +153,14 @@ function App() {
           path='/Register'
           element={
             <>
-              <Register />
+              <Register
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
+              />
             </>
           }>
         </Route>
@@ -156,7 +170,14 @@ function App() {
           path='/Login'
           element={
             <>
-              <Login />
+              <Login
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
+              />
             </>
           }>
         </Route>
@@ -221,6 +242,7 @@ function App() {
 
         {/* //? из footer */}
         <Route
+          exact
           path='/:path/:path_second'
           element={
             <FooterPages />
@@ -239,7 +261,6 @@ function App() {
 
         {/* все остальное {любой путь кроме выше описанных} */}
         <Route
-          // todo не забыть включить обратно
           path="*"
           element={
             <Navigate to="/Page_Not_Found_Or_In_Development" />
@@ -274,6 +295,7 @@ function App() {
       <Footer />
 
       {/*//! pop-up`ы сайта */}
+      {/* PopupInfo */}
       <PopupInfo
         isOpen={isPopupInfoOpen}
         setIsOpen={setIsPopupInfoOpen}
@@ -282,11 +304,20 @@ function App() {
         message={isPopupInfoMessage}
       />
 
+      {/* PopupCrypto */}
       <PopupCrypto
         isOpen={isPopupCryptoOpen}
         setIsOpen={setIsPopupCryptoOpen}
-
         setCurrentCrypto={sendPopup ? setSendCrypto : setResultingCrypto}
+      />
+
+      <PopupValid
+        isOpen={isPopupValidOpen}
+        setIsOpen={setIsPopupValidOpen}
+        img={imagePopupValid}
+        alt={altPopupValid}
+        message={messagePopupValid}
+
       />
 
     </div >
