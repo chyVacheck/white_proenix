@@ -1,8 +1,8 @@
 
+//? стили
 import './ChangeReviews.css';
 
 function ChangeReviews({ reviews = [], setLeftReview, leftReview, setRightReview, rightReview, isOpening, setIsOpening }) {
-
 
   return (
     <article className='changeReviews'>

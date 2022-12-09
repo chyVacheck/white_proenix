@@ -1,4 +1,5 @@
 
+//? стили
 import './BigButton.css';
 
 function BigButton({ func = (() => { console.log('I am big button') }), type, sizeBig, children }) {

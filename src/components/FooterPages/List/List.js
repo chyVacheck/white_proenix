@@ -1,4 +1,5 @@
 
+//? стили
 import './List.css';
 
 function List({ textBefore, list = [], textAfter }) {

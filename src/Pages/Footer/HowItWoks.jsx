@@ -1,6 +1,8 @@
 
-import BigTitle from '../../components/BigTitle/BigTitle.js';
-
+//? компоненты
+// общие
+import { BigTitle } from './../../components/Components.js';
+// из footer
 import Title from '../../components/FooterPages/Title/Title.js';
 import Paragrafs from '../../components/FooterPages/Paragrafs/Paragrafs.js';
 import List from '../../components/FooterPages/List/List.js';

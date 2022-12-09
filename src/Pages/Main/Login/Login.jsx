@@ -5,14 +5,12 @@ import "./Login.css";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 //? компоненты
-import BigTitle from "../../../components/BigTitle/BigTitle.js";
-import BigButton from "../../../components/BigButton/BigButton.js";
-import Field from "../../../components/Field/Field.js";
+import {BigTitle,BigButton, Field} from './../../../components/Components.js';
 
 //? hook
 import useForm from "../../../hooks/useForm.js";
 
-//? компоненты for input
+//? валидация
 import { handleInput } from "../../../utils/FormValidation.js";
 
 function Login({ popupValid }) {

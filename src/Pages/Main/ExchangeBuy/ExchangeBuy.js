@@ -1,17 +1,16 @@
 
 //? стили
 import './ExchangeBuy.css';
-
-import BigTitle from './../../../components/BigTitle/BigTitle.js';
-import Field from './../../../components/Field/Field';
+//* react
 import { useEffect, useState } from 'react';
-import ChangeButton from './../../../components/ChangeButton/ChangeButton';
-import BigButton from './../../../components/BigButton/BigButton';
-import useForm from './../../../hooks/useForm.js';
-
-import imgRight from './../../../images/Right.svg';
 import { NavLink } from 'react-router-dom';
-
+//? компоненты
+import {BigTitle, BigButton, Field, ButtonCopied, ChangeButton} from './../../../components/Components.js';
+//? hooks
+import useForm from './../../../hooks/useForm.js';
+//? фото
+import imgRight from './../../../images/Right.svg';
+//* константы
 import { CryptoContent, imageWaiting as wait, imagePopupInfoComplete as complete, imageError as error } from './../../../utils/constants.js';
 
 function ExchangeBuy({
@@ -21,7 +20,7 @@ function ExchangeBuy({
   openCryptoPopupSend,
   openCryptoPopupRes,
   resulValue,
-
+  popupValid,
   sendCrypto,
   resultingCrypto,
 
@@ -246,13 +245,9 @@ function ExchangeBuy({
             type='text'
             readOnly={true}
           >
-            <button
-              className='exchange-buy__button-copy button'
-              type='button'
-              onClick={() => { navigator.clipboard.writeText(values.adressDeposit) }}
-            >
+            <ButtonCopied popupValid={popupValid} text={values.adressDeposit} className='exchange-buy__button-copy button'>
               Copy Adress
-            </button>
+            </ButtonCopied>
           </Field>
           <div className='exchange-buy__information'>
             <div className='exchange-buy__information-container'>

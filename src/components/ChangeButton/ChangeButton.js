@@ -1,4 +1,5 @@
 
+//? стили
 import './ChangeButton.css';
 
 function ChangeButton({ crypto, func = () => { console.log('onClick was click in ChangeButton') } }) {

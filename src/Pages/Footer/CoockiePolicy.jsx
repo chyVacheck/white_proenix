@@ -1,7 +1,9 @@
 
-import BigTitle from '../../components/BigTitle/BigTitle.js';
+//? компоненты
+// общие
+import { BigTitle } from './../../components/Components.js';
+// из footer
 import LastUpdate from '../../components/FooterPages/LastUpdate/LastUpdate.js';
-
 import Paragrafs from '../../components/FooterPages/Paragrafs/Paragrafs.js';
 import List from '../../components/FooterPages/List/List.js';
 import Table from '../../components/FooterPages/Table/Table.js';

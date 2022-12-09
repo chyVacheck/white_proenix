@@ -1,4 +1,5 @@
 
+//? стили
 import './BigTitle.css';
 
 function BigTitle({ children, id }) {

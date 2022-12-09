@@ -1,3 +1,5 @@
+
+//? стили
 import './Title.css';
 
 function Title({ children, subTitle }) {

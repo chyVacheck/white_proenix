@@ -1,7 +1,11 @@
 
+//? стили
 import './Policies.css';
+//? компоненты
+// личные
 import PoliciesButton from './__button/PoliciesButton.js';
-import BigTitle from '../../../components/BigTitle/BigTitle.js';
+// общие
+import { BigTitle } from './../../../components/Components.js';
 
 function Policies() {
 

@@ -1,17 +1,16 @@
 
+//? стили
+import './Header.css';
+//* react
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 //? картинка
 import logo from './../../images/Logo.png';
 import userIcon from './../../images/user/User.svg';
 
-//? стили
-import './Header.css';
-
-//? другие компоненты
-import HeaderNavlink from './__navlink/HeaderNavlink';
+//? компоненты
+// личные
+import HeaderNavlink from './__navlink/HeaderNavlink.js';
 import HeaderButton from './__button/HeaderButton.js';
-
-//? вспомогательны
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 function Header({ currentID, isLogined = false }) {
 

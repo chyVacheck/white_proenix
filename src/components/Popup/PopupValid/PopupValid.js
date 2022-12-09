@@ -1,7 +1,9 @@
 
+//? стили
 import './PopupValid.css';
-import Popup from '../Popup.js';
+//* react
 import { useEffect, useState } from 'react';
+import Popup from '../Popup.js';
 
 function PopupValid({ isOpen, setIsOpen, img, alt, message }) {
 

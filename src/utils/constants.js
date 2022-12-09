@@ -139,6 +139,8 @@ const CryptoContent = {
   }
 }
 
+export const EMAIL_OF_SITE = 'white_phoenix@phoenixw.com';
+
 export const errorMesages = {
   tooShort: 'Input is too short',
   tooLong: 'Input is too long',

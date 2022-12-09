@@ -1,11 +1,15 @@
 
-import BigTitle from '../../components/BigTitle/BigTitle.js';
+//* react
+import { NavLink } from 'react-router-dom';
+//? компоненты
+// общие
+import { BigTitle } from '../../components/Components.js';
+// из footer
 import LastUpdate from '../../components/FooterPages/LastUpdate/LastUpdate.js';
-
 import Title from '../../components/FooterPages/Title/Title.js';
 import Paragrafs from '../../components/FooterPages/Paragrafs/Paragrafs.js';
 import List from '../../components/FooterPages/List/List.js';
-import { NavLink } from 'react-router-dom';
+
 
 function PrivacyPolicy() {
 

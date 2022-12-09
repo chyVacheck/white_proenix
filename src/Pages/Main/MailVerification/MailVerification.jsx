@@ -4,8 +4,7 @@ import './MailVerification.css';
 //* react
 import { useState } from 'react';
 //? компоненты
-import BigTitle from '../../../components/BigTitle/BigTitle.js';
-import BigButton from '../../../components/BigButton/BigButton.js';
+import { BigTitle, BigButton } from './../../../components/Components.js';
 
 //? hook
 import useForm from '../../../hooks/useForm.js';

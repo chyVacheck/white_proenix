@@ -1,4 +1,5 @@
 
+//? стили
 import './PopupInfo.css';
 import Popup from './../Popup.js';
 

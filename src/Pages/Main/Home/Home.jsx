@@ -1,22 +1,21 @@
 
 //? стили
 import './Home.css';
-import BigTitle from './../../../components/BigTitle/BigTitle.js';
-import BigButton from './../../../components/BigButton/BigButton.js';
-import Field from './../../../components/Field/Field.js';
-import ChangeButton from './../../../components/ChangeButton/ChangeButton.js';
-import InfoCards from './../../../components/InfoCards/InfoCards.js'
-//? 
+//* react
+import { useNavigate } from 'react-router-dom';
+
+//? компоненты
+// личные
 import Reviews from './Reviews/Reviews.js';
 import CurrencyReserve from './CurrencyReserve/CurrencyReserve.js';
-
+// общие
+import { BigTitle, BigButton, ChangeButton, Field, InfoCards } from '../../../components/Components.js';
 //? images for cards info
 import imgBuy from './../../../images/cardsInfo/Buy.png';
 import imgSupport from './../../../images/cardsInfo/Support.png';
 import imgFast from './../../../images/icons/waiting.svg';
 import imgSecurity from './../../../images/cardsInfo/Safe.png';
 
-import { useNavigate } from 'react-router-dom';
 
 function Home({
   sendValue = 1,

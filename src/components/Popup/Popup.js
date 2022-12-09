@@ -1,3 +1,5 @@
+
+//? стили
 import './Popup.css';
 
 function Popup({ small, name, isOpen, setIsOpen, children, ...props }) {

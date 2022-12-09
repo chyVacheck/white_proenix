@@ -1,9 +1,14 @@
 
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import useForm from '../../../hooks/useForm';
-import Field from '../../Field/Field';
+//? стили
 import './AdminLogin.css';
+//* react
+import { useEffect, useState } from 'react';
+//? компоненты
+import { Field } from './../../Components.js';
+//? валидация3
+import useForm from './../../../hooks/useForm.js';
+//* axios
+import axios from 'axios';
 
 function AdminLogin() {
 
@@ -13,17 +18,14 @@ function AdminLogin() {
 
   const [ip, setIP] = useState('');
 
-  //creating function to load ip address from the API
   const getData = async () => {
     const res = await axios.get('https://geolocation-db.com/json/')
     console.log(res.data);
     setIP(res.data.IPv4)
   }
-  
-  useEffect( () => {
-    //passing getData method to the lifecycle method
-    getData()
 
+  useEffect(() => {
+    getData()
   }, [])
 
 

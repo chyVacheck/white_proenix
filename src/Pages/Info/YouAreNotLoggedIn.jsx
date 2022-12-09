@@ -1,7 +1,10 @@
 
+//? стили
 import Pages from './Pages.js';
-import src from './../../images/icons/error.svg';
+//* react
 import { NavLink } from 'react-router-dom';
+//? фото
+import src from './../../images/icons/error.svg';
 
 function YouAreNotLoggedIn() {
 

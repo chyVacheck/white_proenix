@@ -12,7 +12,7 @@ import AMLPolicy from './Footer/AMLPolicy.jsx';
 
 //! Main
 //? main
-import Home from './Main/Home/Home.js';
+import Home from './Main/Home/Home.jsx';
 import ExchangeBuy from './Main/ExchangeBuy/ExchangeBuy.js';
 import Support from './Main/Support/Support.jsx';
 import Profile from './Main/Profile/Profile.jsx';
@@ -23,9 +23,9 @@ import Register from './Main/Register/Register.jsx';
 import MailVerification from './Main/MailVerification/MailVerification.jsx';
 
 //? info pages
-import PageInDevelopment from './Info/PageInDevelopment';
-import PageNotFound from './Info/PageNotFound';
-import YouAreNotLoggedIn from './Info/YouAreNotLoggedIn.js';
+import PageInDevelopment from './Info/PageInDevelopment.jsx';
+import PageNotFound from './Info/PageNotFound.jsx';
+import YouAreNotLoggedIn from './Info/YouAreNotLoggedIn.jsx';
 
 
 //! export

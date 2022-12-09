@@ -1,5 +1,7 @@
 
+//? стили
 import './InfoCards.css';
+//* reacts
 import { useNavigate } from 'react-router-dom';
 
 function InfoCards({ cards = [] }) {

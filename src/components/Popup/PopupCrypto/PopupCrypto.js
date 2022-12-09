@@ -1,11 +1,16 @@
 
+//? стили
 import './PopupCrypto.css';
 import Popup from '../Popup.js';
+//? компоненты
+// личные
 import CryptoChangeButton from './__button/CryptoChangeButton.js';
+//? фото
 import { CryptoContent as images } from '../../../utils/constants';
 
 function PopupCrypto({ isOpen, setIsOpen, setCurrentCrypto }) {
 
+  //todo убрать до релиза
   window.PopupCrypto = setIsOpen;
 
   function closePopup() {

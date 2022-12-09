@@ -1,4 +1,5 @@
 
+//? стили
 import './Paragrafs.css';
 
 function Paragrafs({ paragrafs = [] }) {

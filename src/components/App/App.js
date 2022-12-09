@@ -1,6 +1,8 @@
 
 //? стили
 import "./App.css";
+//* react
+import { useState } from "react";
 import { Routes, Navigate, Route } from "react-router-dom";
 
 //? основные
@@ -26,29 +28,29 @@ import { Home, Support, ExchangeBuy, Profile } from "./../../Pages/Pages.js";
 //* footer
 import { Policies } from "./../../Pages/Pages.js";
 
-//? для администрации
+//* для администрации
 import { AdminLogin } from "./../Admin/Admin.js";
 // import AdminPanel from './../Admin/AdminPanel.js';
 
-//? информационные pages
+//* информационные pages
 import {
   PageNotFound,
   YouAreNotLoggedIn,
   PageInDevelopment,
 } from "./../../Pages/Pages.js";
 
-//? авторизация/регистрация
+//* авторизация/регистрация
 import { Register, Login, MailVerification } from "./../../Pages/Pages.js";
 
 //* хуки
-import { useState } from "react";
 import useForm from "./../../hooks/useForm";
 
-//* constants
+//? constants
 import { popupInfoContent, CryptoContent } from "./../../utils/constants.js";
 
 function App() {
   const [isLogined, setIsLogined] = useState(false);
+  //todo убрать до релиза
   window.setIsLogined = (value) => {
     setIsLogined(value);
   };
@@ -212,6 +214,12 @@ function App() {
                 sendCrypto={sendCrypto}
                 resultingCrypto={resultingCrypto}
                 logOf={logOf}
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
               />
             </ProtecredRouter>
           }
@@ -222,7 +230,14 @@ function App() {
           path="/Support"
           element={
             <>
-              <Support />
+              <Support
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
+              />
             </>
           }
         ></Route>
@@ -241,7 +256,7 @@ function App() {
           }
         ></Route>
 
-        {/* профиль {Profile} */}
+        {/* истоиря транзакций {Profile/History} */}
         <Route
           path="/Profile/History"
           element={
@@ -266,6 +281,7 @@ function App() {
           }
         ></Route>
 
+        {/* //? another Pages */}
         {/* все остальное {любой путь кроме выше описанных} */}
         <Route path="*" element={<Navigate to="/Page_Not_Found" />}></Route>
 

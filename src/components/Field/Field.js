@@ -1,7 +1,21 @@
 
+//? стили
 import './Field.css';
 
-function Field({ className, readOnly = false, isPlaceholder = true, inputName, fieldName, value, handleChange, minLength, maxLength, type, required = true, children, showPass = false }) {
+function Field({
+  className,
+  readOnly = false,
+  isPlaceholder = true,
+  inputName,
+  fieldName,
+  value,
+  handleChange,
+  minLength,
+  maxLength,
+  type,
+  required = true,
+  children,
+  showPass = false }) {
 
   const placeholder = isPlaceholder ? 'Enter your ' + fieldName.toLowerCase() : ''
 
@@ -22,7 +36,7 @@ function Field({ className, readOnly = false, isPlaceholder = true, inputName, f
         type={showPass ? 'text' : type}
         required={required}
         placeholder={placeholder}
-        className={'field__input ' + className }
+        className={'field__input ' + className}
         id={fieldName}
 
         readOnly={readOnly}
