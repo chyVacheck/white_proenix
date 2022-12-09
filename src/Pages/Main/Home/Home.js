@@ -1,4 +1,5 @@
 
+//? стили
 import './Home.css';
 import BigTitle from './../../../components/BigTitle/BigTitle.js';
 import BigButton from './../../../components/BigButton/BigButton.js';

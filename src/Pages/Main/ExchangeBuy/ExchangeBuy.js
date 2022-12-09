@@ -1,5 +1,7 @@
 
+//? стили
 import './ExchangeBuy.css';
+
 import BigTitle from './../../../components/BigTitle/BigTitle.js';
 import Field from './../../../components/Field/Field';
 import { useEffect, useState } from 'react';

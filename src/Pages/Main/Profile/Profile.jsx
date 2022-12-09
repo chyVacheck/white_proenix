@@ -1,11 +1,12 @@
 
+//? стили
 import './Profile.css';
-
-import { images } from './../../../utils/constants';
-
+//* react
+import { useEffect, useState } from 'react';
+//? фото
+import { images } from '../../../utils/constants';
 import star from './../../../images/reviews/Star.svg';
 import user_img from './../../../images/user/User_black.svg';
-import { useEffect, useState } from 'react';
 
 
 function Profile({

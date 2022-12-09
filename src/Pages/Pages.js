@@ -1,26 +1,26 @@
 
 //! Footer
 //* About us
-import HowItWorks from './Footer/HowItWoks.js';
+import HowItWorks from './Footer/HowItWoks.jsx';
 
 //* Policies
-import Policies from './Footer/Policies/Policies.js';
-import TermsOfService from './Footer/TermsOfService.js';
-import PrivacyPolicy from './Footer/PrivacyPolicy.js';
-import CoockiePolicy from './Footer/CoockiePolicy.js';
-import AMLPolicy from './Footer/AMLPolicy.js';
+import Policies from './Footer/Policies/Policies.jsx';
+import TermsOfService from './Footer/TermsOfService.jsx';
+import PrivacyPolicy from './Footer/PrivacyPolicy.jsx';
+import CoockiePolicy from './Footer/CoockiePolicy.jsx';
+import AMLPolicy from './Footer/AMLPolicy.jsx';
 
 //! Main
 //? main
 import Home from './Main/Home/Home.js';
 import ExchangeBuy from './Main/ExchangeBuy/ExchangeBuy.js';
-import Support from './Main/Support/Support.js';
-import Profile from './Main/Profile/Profile.js';
+import Support from './Main/Support/Support.jsx';
+import Profile from './Main/Profile/Profile.jsx';
 
 //? sign in/up, mail verefecation
-import Login from './Main/Login/Login.js';
-import Register from './Main/Register/Register.js';
-import MailVerification from './Main/MailVerification/MailVerification.js';
+import Login from './Main/Login/Login.jsx';
+import Register from './Main/Register/Register.jsx';
+import MailVerification from './Main/MailVerification/MailVerification.jsx';
 
 //? info pages
 import PageInDevelopment from './Info/PageInDevelopment';

@@ -1,6 +1,8 @@
 
+//? стили
 import Pages from './Pages.js';
-import  { imageError } from './../../utils/constants.js';
+//? фото
+import  { imageError } from '../../utils/constants.js';
 
 function PageNotFound() {
 

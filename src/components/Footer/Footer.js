@@ -1,6 +1,7 @@
 
+//? стили
 import './Footer.css';
-
+// личные компоненты
 import FooterInfoColumn from './__info-column/Footer__info-column';
 
 function Footer() {

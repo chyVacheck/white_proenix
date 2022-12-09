@@ -1,11 +1,14 @@
 
+//? стили
 import './MailVerification.css';
-import BigTitle from './../../../components/BigTitle/BigTitle.js';
-import BigButton from './../../../components/BigButton/BigButton.js';
+//* react
+import { useState } from 'react';
+//? компоненты
+import BigTitle from '../../../components/BigTitle/BigTitle.js';
+import BigButton from '../../../components/BigButton/BigButton.js';
 
 //? hook
-import useForm from './../../../hooks/useForm.js';
-import { useState } from 'react';
+import useForm from '../../../hooks/useForm.js';
 
 function MailVerification({ mail = 'johny@gmail.com' }) {
 

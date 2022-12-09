@@ -1,6 +1,8 @@
 
+//? стили
 import Pages from './Pages.js';
-import { imageWaiting } from './../../utils/constants.js';
+//? фото
+import { imageWaiting } from '../../utils/constants.js';
 
 function PageInDevelopment() {
 
