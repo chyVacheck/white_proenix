@@ -23,13 +23,13 @@ import PopupValid from "../Popup/PopupValid/PopupValid";
 
 //! страницы
 //* main
-import { Home, Support, ExchangeBuy, Profile } from "./../../Pages/Pages.js";
+import { Home, Support, ExchangeBuy, Profile, SiteVersionHistory } from "./../../Pages/Pages.js";
 
 //* footer
 import { Policies } from "./../../Pages/Pages.js";
 
 //* для администрации
-import { AdminLogin } from "./../Admin/Admin.js";
+import { AdminLogin } from "./../../Pages/Admin/Admin.js";
 // import AdminPanel from './../Admin/AdminPanel.js';
 
 //* информационные pages
@@ -128,7 +128,11 @@ function App() {
 
       <Routes>
         {/* ввоод пароля для админки {Admin} */}
-        <Route exact path="/Admin" element={<AdminLogin />}></Route>
+        <Route
+          exact
+          path="/Admin"
+          element={<AdminLogin />}>
+        </Route>
 
         {/* основной контент {/Home} */}
         <Route
@@ -310,7 +314,8 @@ function App() {
         {/* у вас нет доступа к этой странице {Site_version_history} */}
         <Route
           path="/Site_version_history"
-          element={<>{/* <SiteVersionHistory /> */}</>}
+          // element={<SiteVersionHistory />}
+          element={<PageInDevelopment />}
         ></Route>
       </Routes>
 

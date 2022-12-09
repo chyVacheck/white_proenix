@@ -4,7 +4,7 @@ import './AdminLogin.css';
 //* react
 import { useEffect, useState } from 'react';
 //? компоненты
-import { Field } from './../../Components.js';
+import { Field } from './../../../components/Components.js';
 //? валидация3
 import useForm from './../../../hooks/useForm.js';
 //* axios
@@ -28,6 +28,9 @@ function AdminLogin() {
     getData()
   }, [])
 
+  function onClick() {
+    console.log('123');
+  }
 
   return (
     <section className='adminLogin'>
@@ -40,7 +43,7 @@ function AdminLogin() {
           type={'text'}
         />
         <p className='adminLogin__message'>
-          If the password is entered incorrectly, the login will be blocked for one hour
+          If the password is entered incorrectly, the <span onClick={onClick}>login</span> will be blocked for one hour
         </p>
       </article>
     </section>
