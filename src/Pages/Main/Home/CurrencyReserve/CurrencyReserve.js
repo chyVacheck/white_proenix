@@ -6,24 +6,26 @@ import { CryptoContent } from './../../../../utils/constants.js';
 
 function CurrencyReserve({
   CurrencyReserve = {
-    BTC: 17.2739,
-    MATIC: 16.3721,
-    NEXO: 3.3463,
-    USDT: 53.3550,
-    ETH: 65.3345,
-    BNB: 32.3562,
+    BTC: 17.9739,
+    MATIC: 134014.2721,
+    NEXO: 239702.1463,
+    USDT: 159253.3550,
+    ETH: 109001.1705,
+    BNB: 168017.7542,
   },
   setResultingCrypto,
 
 }) {
 
+  const scroll = 650;
+
   const onClick = {
-    BTC: (() => { setResultingCrypto(CryptoContent.BTC); window.scroll(0, 650) }),
-    MATIC: (() => { setResultingCrypto(CryptoContent.MATIC); window.scroll(0, 650) }),
-    NEXO: (() => { setResultingCrypto(CryptoContent.NEXO); window.scroll(0, 650) }),
-    USDT: (() => { setResultingCrypto(CryptoContent.USDT); window.scroll(0, 650) }),
-    ETH: (() => { setResultingCrypto(CryptoContent.ETH); window.scroll(0, 650) }),
-    BNB: (() => { setResultingCrypto(CryptoContent.BNB); window.scroll(0, 650) }),
+    BTC: (() => { setResultingCrypto(CryptoContent.BTC); window.scroll(0, scroll) }),
+    MATIC: (() => { setResultingCrypto(CryptoContent.MATIC); window.scroll(0, scroll) }),
+    NEXO: (() => { setResultingCrypto(CryptoContent.NEXO); window.scroll(0, scroll) }),
+    USDT: (() => { setResultingCrypto(CryptoContent.USDT); window.scroll(0, scroll) }),
+    ETH: (() => { setResultingCrypto(CryptoContent.ETH); window.scroll(0, scroll) }),
+    BNB: (() => { setResultingCrypto(CryptoContent.BNB); window.scroll(0, scroll) }),
   }
 
   return (
