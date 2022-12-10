@@ -1,0 +1,54 @@
+.allTransactionHistory {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.transaction {
+  background: #282828;
+  border-radius: 12px;
+  width: 316px;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 15px 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.transaction__text-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction__text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0;
+  color: #afafaf;
+}
+
+.transaction__text_fat {
+  font-weight: 500;
+}
+
+.transaction__status {
+  width: 23px;
+  height: 23px;
+}
+
+.transaction__value{
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.transaction__link{
+  text-decoration: underline;
+  color: #fff;
+
+  /*todo убрать позже  */
+  display: none;
+}

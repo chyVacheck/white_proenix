@@ -2,6 +2,7 @@
 //? стили
 import './AdminLogin.css';
 //* react
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 //? компоненты
 import { Field } from './../../../components/Components.js';
@@ -9,8 +10,12 @@ import { Field } from './../../../components/Components.js';
 import useForm from './../../../hooks/useForm.js';
 //* axios
 import axios from 'axios';
+//? константы 
+import { ADMIN_PASSWORD as PASSWORD } from './../../../utils/constants.js';
 
-function AdminLogin() {
+function AdminLogin({ setAdminLogin }) {
+
+  const navigate = useNavigate();
 
   const { values, handleChange, setValues } = useForm({
     password: ''
@@ -29,7 +34,10 @@ function AdminLogin() {
   }, [])
 
   function onClick() {
-    console.log('123');
+    if (values.passwordLogin === PASSWORD) {
+      setAdminLogin(true);
+      navigate('/AdminPanel');
+    }
   }
 
   return (

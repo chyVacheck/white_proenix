@@ -15,7 +15,9 @@ function Field({
   type,
   required = true,
   children,
-  showPass = false }) {
+  showPass = false,
+  noValidate = false,
+}) {
 
   const placeholder = isPlaceholder ? 'Enter your ' + fieldName.toLowerCase() : ''
 
@@ -28,6 +30,7 @@ function Field({
 
       {/* input */}
       <input
+        noValidate={noValidate}
         value={value || ''}
         onChange={handleChange}
         minLength={minLength}
