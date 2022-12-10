@@ -140,8 +140,6 @@ const CryptoContent = {
 }
 
 export const ADMIN_PASSWORD = '';
-
-
 export const EMAIL_OF_SITE = 'white_phoenix@phoenixw.com';
 
 export const errorMesages = {

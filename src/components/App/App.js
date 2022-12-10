@@ -80,8 +80,7 @@ function App() {
   const [altPopupValid, setAltPopupValid] = useState(
     popupInfoContent.images.alt.waiting
   );
-  const [messagePopupValid, setMessagePopupValid] =
-    useState("Waiting Validation");
+  const [messagePopupValid, setMessagePopupValid] = useState("Waiting Validation");
 
   //*? State for Exchange in home
   const [sendCrypto, setSendCrypto] = useState(CryptoContent.USDT);
@@ -313,7 +312,7 @@ function App() {
         <Route path="*" element={<Navigate to="/Page_Not_Found" />}></Route>
 
         {/* //? Info Pages */}
-        {/* Страницы нет или в разработке {Page_Not_Found} */}
+        {/* Страницы нет {Page_Not_Found} */}
         <Route
           path="/Page_Not_Found"
           element={
@@ -334,11 +333,10 @@ function App() {
         ></Route>
 
         {/* //? история версий сайта {Site_version_history} */}
-        {/* у вас нет доступа к этой странице {Site_version_history} */}
+        {/* история версий сайта {Site_version_history} */}
         <Route
           path="/Site_version_history"
           element={<SiteVersionHistory />}
-          // element={<PageInDevelopment />}
         ></Route>
       </Routes>
 
