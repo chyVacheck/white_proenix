@@ -1,7 +1,7 @@
 .adminPanel {
   margin: 0;
   display: grid;
-  grid-template-columns: minmax(450px, 2fr) minmax(427px, 3fr) 200px;
+  grid-template-columns: minmax(450px, 2fr) minmax(475px, 3fr) 200px;
   color: #fff;
   padding: 0 50px;
   box-sizing: border-box;

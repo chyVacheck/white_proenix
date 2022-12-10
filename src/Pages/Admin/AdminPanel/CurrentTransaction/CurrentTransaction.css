@@ -54,7 +54,7 @@
   padding: 15px;
   gap: 15px;
   display: grid;
-  grid-template-columns: 4fr 8fr 25px;
+  grid-template-columns: minmax(155px, 1fr) minmax(182px, 2fr) minmax(25px, 1fr);
   justify-content: space-between;
 }
 
