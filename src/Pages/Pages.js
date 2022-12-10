@@ -16,6 +16,7 @@ import Home from './Main/Home/Home.jsx';
 import ExchangeBuy from './Main/ExchangeBuy/ExchangeBuy.js';
 import Support from './Main/Support/Support.jsx';
 import Profile from './Main/Profile/Profile.jsx';
+import SiteVersionHistory from './Main/SiteVersionHistory/SiteVersionHistory.jsx';
 
 //? sign in/up, mail verefecation
 import Login from './Main/Login/Login.jsx';
@@ -35,7 +36,7 @@ export { HowItWorks };
 //* Policies
 export { Policies, TermsOfService, PrivacyPolicy, CoockiePolicy, AMLPolicy };
 //? main
-export { Home, ExchangeBuy, Support, Profile };
+export { Home, ExchangeBuy, Support, Profile, SiteVersionHistory };
 //* sign in/up, mail verefecation
 export { Login, Register, MailVerification };
 //* info pages

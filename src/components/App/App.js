@@ -29,7 +29,7 @@ import { Home, Support, ExchangeBuy, Profile, SiteVersionHistory } from "./../..
 import { Policies } from "./../../Pages/Pages.js";
 
 //* для администрации
-import { AdminLogin } from "./../../Pages/Admin/Admin.js";
+import { AdminLogin, AdminPanel } from "./../../Pages/Admin/Admin.js";
 // import AdminPanel from './../Admin/AdminPanel.js';
 
 //* информационные pages
@@ -50,6 +50,7 @@ import { popupInfoContent, CryptoContent } from "./../../utils/constants.js";
 
 function App() {
   const [isLogined, setIsLogined] = useState(false);
+  const [isAdminLogin, setIsAdminLogin] = useState(false);
   //todo убрать до релиза
   window.setIsLogined = (value) => {
     setIsLogined(value);
@@ -131,7 +132,29 @@ function App() {
         <Route
           exact
           path="/Admin"
-          element={<AdminLogin />}>
+          element={
+            <AdminLogin
+              setAdminLogin={setIsAdminLogin}
+            />
+          }>
+        </Route>
+
+        {/* админ панель {AdminPanel} */}
+        <Route
+          exact
+          path="/AdminPanel"
+          element={
+            <ProtecredRouter loggedIn={isAdminLogin}>
+              <AdminPanel
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
+              />
+            </ProtecredRouter>
+          }>
         </Route>
 
         {/* основной контент {/Home} */}
@@ -314,8 +337,8 @@ function App() {
         {/* у вас нет доступа к этой странице {Site_version_history} */}
         <Route
           path="/Site_version_history"
-          // element={<SiteVersionHistory />}
-          element={<PageInDevelopment />}
+          element={<SiteVersionHistory />}
+          // element={<PageInDevelopment />}
         ></Route>
       </Routes>
 
