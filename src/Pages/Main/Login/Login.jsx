@@ -38,7 +38,7 @@ function Login({ popupValid }) {
     <article className="login">
       <BigTitle id="sign-in">sign in</BigTitle>
 
-      <form className="login__form">
+      <form formNoValidate className="login__form">
         <Field
           inputName={"email"}
           fieldName="Email Address"

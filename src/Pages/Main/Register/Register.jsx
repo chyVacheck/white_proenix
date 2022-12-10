@@ -38,7 +38,7 @@ function Register({ popupValid }) {
       <BigTitle id='sign-up'>
         sign up
       </BigTitle>
-      <form className='register__form'>
+      <form formNoValidate className='register__form'>
         <div className='register__fields'>
           <Field
             inputName={'email'}

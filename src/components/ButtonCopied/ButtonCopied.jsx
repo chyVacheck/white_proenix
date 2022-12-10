@@ -4,14 +4,14 @@ import './ButtonCopied.css';
 //? фото
 import { images } from "../../utils/constants";
 
-function ButtonCopied({ popupValid, text, className, children }) {
+function ButtonCopied({ popupValid, text, className, message = 'Copied', children }) {
 
   function onClick() {
     navigator.clipboard.writeText(text);
     setTimeout(() => { popupValid.setIsPopupValidOpen(false); }, 1500);
     popupValid.setImagePopupValid(images.icon.complete);
     popupValid.setAltPopupValid(images.alt.complete);
-    popupValid.setMessagePopupValid('Copied');
+    popupValid.setMessagePopupValid(message);
     popupValid.setIsPopupValidOpen(true);
   }
 
