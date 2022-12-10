@@ -3,7 +3,6 @@
 import './CurrentTransaction.css';
 //* react
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 //? константы
 import { images } from '../../../../utils/constants';
 import { ButtonCopied } from '../../../../components/Components';
@@ -25,12 +24,12 @@ function CurrentTransaction(props) {
         valueRes: 100,
         id: 17359401,
         date: {
-          day: 1,
-          month: 1,
-          year: 1,
+          year: 2022,
+          month: 12,
+          day: 10,
           hour: 23,
-          minute: 50,
-          second: 0,
+          minute: 35,
+          second: 2,
         }
       },
       {
@@ -39,12 +38,12 @@ function CurrentTransaction(props) {
         valueSend: 1713,
         valueRes: 0.61,
         date: {
-          day: 1,
-          month: 1,
-          year: 1,
-          hour: 14,
-          minute: 30,
-          second: 17,
+          year: 2022,
+          month: 12,
+          day: 11,
+          hour: 0,
+          minute: 13,
+          second: 19,
         }
       },
       {
@@ -53,12 +52,12 @@ function CurrentTransaction(props) {
         valueSend: 713,
         valueRes: 451,
         date: {
-          day: 1,
-          month: 1,
-          year: 1,
-          hour: 16,
-          minute: 50,
-          second: 12,
+          year: 2022,
+          month: 12,
+          day: 10,
+          hour: 23,
+          minute: 17,
+          second: 2,
         }
       },
     ]);
@@ -114,10 +113,9 @@ function CurrentTransaction(props) {
           deleteItem(item);
         }
 
-        const itemTimeSec = item.date.hour * 3600 + item.date.minute * 60 + item.date.second; // сколько было времени в секундах
-        let currentTimeInSec = time.getHours() * 3600 + time.getMinutes() * 60 + time.getSeconds(); // сколько сейчас времени в секундах
+        const itemTimeSec = item.date.day * 3600 * 24 + item.date.hour * 3600 + item.date.minute * 60 + item.date.second; // сколько было времени в секундах
+        let currentTimeInSec = time.getDate() * 3600 * 24 + time.getHours() * 3600 + time.getMinutes() * 60 + time.getSeconds(); // сколько сейчас времени в секундах
         let remainedTimeSec = currentTimeInSec - itemTimeSec; // сколько прошло времени в секундах
-
 
         let time_hour = Math.floor(remainedTimeSec / 3600);
         remainedTimeSec = remainedTimeSec - 3600 * Math.floor(remainedTimeSec / 3600);
@@ -133,7 +131,9 @@ function CurrentTransaction(props) {
               <p className='currentTransaction__text'>{item.nameSend} / {item.nameRes}</p>
               {/* link */}
               <div className='currentTransaction__text'>
-                {time_hour < 10 ? '0' + time_hour : time_hour} h : {time_min < 10 ? '0' + time_min : time_min} m : {time_sec < 10 ? '0' + time_sec : time_sec} s {/* //todo сделать отображения прошедшего времени */}
+                {time_hour !== 0 ? (time_hour < 10 ? '0' + time_hour : time_hour) + ' h : ' : (undefined)}
+                {time_min !== 0 ? (time_min < 10 ? '0' + time_min : time_min) + ' m : ' : (undefined)}
+                {time_sec !== 0 ? (time_sec < 10 ? '0' + time_sec : time_sec) + ' s' : (undefined)}
               </div>
             </div>
 
