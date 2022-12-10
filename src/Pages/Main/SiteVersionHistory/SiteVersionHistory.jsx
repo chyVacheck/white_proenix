@@ -6,54 +6,30 @@ function SiteVersionHistory() {
 
   window.scroll(0, 0);
 
-  // const listChanges = [
-  //   {
-  //     v: 0.3,
-  //     date: '29.12.2002',
-  //     changes: [
-  //       'Connect the new font',
-  //       'Update styles',
-  //       'Update style: footer',
-  //       'Update style: index',
-  //       'Create child component for component Policies + Create Policies component + Add new Router Policies',
-  //       'Create new component: Title',
-  //       'Create universal hook',
-  //       'Create new component: BigButton ',
-  //       'Create new component: Field',
-  //       'Make shadow for titles',
-  //       'fix some problems with shadow',
-  //     ],
-  //   },
-  //   {
-  //     v: 0.2,
-  //     date: '28.11.2002',
-  //     changes: [
-  //       'Create a normalize file',
-  //       'Connect the Poppins font',
-  //       'Initial App + Feat: App',
-  //       'Initial components',
-  //       'Create component for Footer',
-  //       'Create component Footer',
-  //       'Create component App',
-  //       'Enable App',
-  //       'create independent style`s',
-  //       'enable style`s',
-  //       'add icons',
-  //       'initial component Support',
-  //       'initial cpmponent Register',
-  //       'initial cpmponent Login',
-  //       'initial component Home',
-  //       'initial component HowItWorks',
-  //       'initial cpmponent ExchangeBuy',
-  //       'create header',
-  //       'Delete Main',
-  //       'add info'
-  //     ],
-  //   },
-  //   
-  // ]
-
   const listChanges = [
+    [
+      {
+        v: 0.11,
+        date: '11.12.2022'
+      },
+      [
+        { name: 'Update', list: ['constants.js', 'CurrentTransaction', 'style in AllUsers', 'AllTransactionHistory', 'AdminPanel'] },
+        { name: 'Create', list: ['component CurrentCryptoCurrencyRate'] },
+        { name: 'Refactor', list: ['style code'] },
+        { name: 'Add', list: ['New info to history'] },
+      ]
+    ],
+    [
+      {
+        v: 0.12,
+        date: '10.12.2022'
+      },
+      [
+        { name: 'Update', list: ['constants.js'] },
+        { name: 'Refactor', list: ['move files by folders'] },
+        { name: 'Create', list: ['Site Version History', 'Admin pages'] }
+      ]
+    ],
     [
       {
         v: 0.11,
@@ -61,7 +37,7 @@ function SiteVersionHistory() {
       },
       [
         { name: 'Refactor', list: ['change the file format', 'move files by folders'] },
-        { name: 'Create', list: ['Site Version History', '']}
+        { name: 'Update', list: ['CurrencyReserve.js', ''] }
       ]
     ],
     [
@@ -77,7 +53,6 @@ function SiteVersionHistory() {
         { name: 'Update', list: ['ExchangeBuy.js', 'Reviews.js'] },
         { name: 'Delete', list: ['delete old page, page was moved to another folder', 'Union.svg'] },
         { name: 'Create', list: ['make a support page', 'pop-up for minor bugs'] },
-
       ]
     ],
     [
@@ -154,21 +129,11 @@ function SiteVersionHistory() {
         date: '29.11.2022'
       },
       [
-        {
-          name: 'Update', list: ['styles', 'style Header', 'style Footer', 'style index', 'style Policies']
-        },
-        {
-          name: 'Create', list: ['child component for component Policies', 'Policies component', 'hook', 'component Field', 'component Login', 'component Register']
-        },
-        {
-          name: 'Add', list: ['new Router Policies', 'icon for Field']
-        },
-        {
-          name: 'Fix', list: ['Problem with links', 'Problem with pages higher than the screen', 'Pproblem with the illumination of the router home']
-        },
-        {
-          name: 'Add', list: ['news font',]
-        },
+        { name: 'Update', list: ['styles', 'style Header', 'style Footer', 'style index', 'style Policies'] },
+        { name: 'Create', list: ['child component for component Policies', 'Policies component', 'hook', 'component Field', 'component Login', 'component Register'] },
+        { name: 'Add', list: ['new Router Policies', 'icon for Field'] },
+        { name: 'Fix', list: ['Problem with links', 'Problem with pages higher than the screen', 'Pproblem with the illumination of the router home'] },
+        { name: 'Add', list: ['news font',] },
       ]
     ],
     [
@@ -177,10 +142,7 @@ function SiteVersionHistory() {
         date: '28.11.2022'
       },
       [
-        {
-          name: 'Create',
-          list: ['normalize', 'component for Footer', 'component Footer', 'component App', 'independent style`s']
-        },
+        { name: 'Create', list: ['normalize', 'component for Footer', 'component Footer', 'component App', 'independent style`s'] },
         {
           name: 'Initial ',
           list: [
@@ -194,7 +156,7 @@ function SiteVersionHistory() {
         { name: 'Delete', list: ['one column', 'main'] },
         { name: 'Style', list: ['code', 'up 2'] },
         { name: 'Update', list: ['Logo.svg'] },
-        { name: 'feat', list: ['App', 'header'] },
+        { name: 'Feat', list: ['App', 'header'] },
       ]
     ],
     [
@@ -229,6 +191,7 @@ function SiteVersionHistory() {
               </div>
               {/* список изменений */}
               <ul className='siteVersionHistory__text-changes-upper'>
+                {/* left column */}
                 <div className='siteVersionHistory__column-list'>
                   {item[1].map((item, index) => {
                     if (index % 2 === 0) {
@@ -247,9 +210,10 @@ function SiteVersionHistory() {
                           }
                         </ul>)
                     }
+                    return undefined;
                   })}
                 </div>
-
+                {/* right column */}
                 <div className='siteVersionHistory__column-list'>
                   {item[1].map((item, index) => {
                     if (index % 2 === 1) {
@@ -268,6 +232,7 @@ function SiteVersionHistory() {
                           }
                         </ul>)
                     }
+                    return undefined;
                   })}
                 </div>
 
