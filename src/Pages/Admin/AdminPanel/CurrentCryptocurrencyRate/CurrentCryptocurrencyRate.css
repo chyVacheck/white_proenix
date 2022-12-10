@@ -1,0 +1,61 @@
+.currentCryptocurrencyRate {
+  margin: 0;
+}
+
+.currentCryptocurrencyRate__info {
+  box-sizing: border-box;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #545454;
+  margin-bottom: 15px;
+}
+
+.currentCryptocurrencyRate__list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.currentCryptocurrencyRate__item {
+  display: grid;
+  align-items: center;
+  box-sizing: border-box;
+  grid-template-columns: minmax(121px, 2fr) 2fr 2fr minmax(1px, 1fr);
+  padding: 0 0 15px 0;
+  gap: 10px;
+  border-bottom: 1px solid #545454;
+}
+
+.currentCryptocurrencyRate__img-name {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+  margin: 0;
+}
+
+.currentCryptocurrencyRate__item-img {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+.currentCryptocurrencyRate__item-name {
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 19px;
+  margin: 0;
+}
+
+.currentCryptocurrencyRate__item-number {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+  color: #afafaf;
+  text-align: center;
+}
+
+.currentCryptocurrencyRate__item-number_marga {
+  margin: 0;
+}
