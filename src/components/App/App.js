@@ -127,6 +127,15 @@ function App() {
       <Header currentID={currentID} isLogined={isLogined} buttonLink="login" />
 
       <Routes>
+        {/*  {/} */}
+        <Route
+          exact
+          path="/"
+          element={
+            <Navigate to="/Home" />
+          }>
+        </Route>
+
         {/* ввоод пароля для админки {Admin} */}
         <Route
           exact
@@ -169,12 +178,19 @@ function App() {
                 sendValueInputName={"sendPrice"}
                 handleChangeSendValue={handleChangeSendValues}
                 resulValue={resulValues.resulPrice}
+                handleChange={handleChangeSendValues}
                 openCryptoPopupSend={openCryptoPopupSend}
                 openCryptoPopupRes={openCryptoPopupRes}
                 sendCrypto={sendCrypto}
                 resultingCrypto={resultingCrypto}
                 setResultingCrypto={setResultingCrypto}
                 logOf={logOf}
+                popupValid={{
+                  setIsPopupValidOpen: setIsPopupValidOpen,
+                  setImagePopupValid: setImagePopupValid,
+                  setAltPopupValid: setAltPopupValid,
+                  setMessagePopupValid: setMessagePopupValid,
+                }}
               />
             </>
           }
