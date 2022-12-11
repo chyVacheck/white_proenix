@@ -15,7 +15,8 @@ import imgBuy from './../../../images/cardsInfo/Buy.png';
 import imgSupport from './../../../images/cardsInfo/Support.png';
 import imgFast from './../../../images/icons/waiting.svg';
 import imgSecurity from './../../../images/cardsInfo/Safe.png';
-
+//? валидация
+import { handleInput } from "../../../utils/FormValidation.js";
 
 function Home({
   sendValue = 1,
@@ -24,17 +25,29 @@ function Home({
   openCryptoPopupSend,
   openCryptoPopupRes,
   resulValue,
-
+  handleChange,
   sendCrypto,
   resultingCrypto,
   setResultingCrypto,
-
+  popupValid,
 }) {
 
   const navigate = useNavigate();
 
   function onClick() {
     navigate('/Exchange_&_Buy');
+  }
+
+  function handleChangeInput(event) {
+    const input = event.target;
+    if (input.value.length > input.maxLength) {
+      input.value = input.value.slice(0, input.maxLength);
+      popupValid.setMessagePopupValid(`Max value is ${input.max}`);
+      popupValid.setIsPopupValidOpen(true);
+    } else {
+      handleInput(event, popupValid);
+    }
+    handleChange(event);
   }
 
   return (
@@ -71,16 +84,16 @@ function Home({
             Cryptocurrency exchange
           </BigTitle>
 
-          <form className='home__form'>
+          <form formNoValidate className='home__form'>
             <Field
               className={'field__input_big'}
               isPlaceholder={false}
               value={sendValue}
               inputName={sendValueInputName}
               fieldName='You Send'
-              handleChange={handleChangeSendValue}
-              minLength={null}
-              maxLength={null}
+              handleChange={handleChangeInput}
+              minLength={2}
+              maxLength={5}
               type='number'
             >
               <ChangeButton

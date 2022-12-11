@@ -5,13 +5,15 @@ import './ExchangeBuy.css';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 //? компоненты
-import {BigTitle, BigButton, Field, ButtonCopied, ChangeButton} from './../../../components/Components.js';
+import { BigTitle, BigButton, Field, ButtonCopied, ChangeButton } from './../../../components/Components.js';
 //? hooks
 import useForm from './../../../hooks/useForm.js';
 //? фото
 import imgRight from './../../../images/Right.svg';
 //* константы
 import { CryptoContent, imageWaiting as wait, imagePopupInfoComplete as complete, imageError as error } from './../../../utils/constants.js';
+//? валидация
+import { handleInput } from "../../../utils/FormValidation.js";
 
 function ExchangeBuy({
   sendValue = 1,
@@ -106,6 +108,33 @@ function ExchangeBuy({
     setCurrenWay(3);
   }
 
+  function handleChangeInputSend(event) {
+    const input = event.target;
+    if (input.value.length > input.maxLength) {
+      input.value = input.value.slice(0, input.maxLength);
+      popupValid.setMessagePopupValid(`Max value is ${input.max}`);
+
+      popupValid.setIsPopupValidOpen(true);
+    } else {
+      handleInput(event, popupValid);
+    }
+    handleChangeSendValue(event);
+    setTimeout(() => { popupValid.setIsPopupValidOpen(false); }, 2000);
+  }
+
+  function handleChangeInputAdress(event) {
+    const input = event.target;
+    if (input.value.length > input.maxLength) {
+      input.value = input.value.slice(0, input.maxLength);
+      popupValid.setMessagePopupValid(`Max lenght is ${input.maxLength}`);
+      popupValid.setIsPopupValidOpen(true);
+    } else {
+      handleInput(event, popupValid);
+    }
+    handleChange(event);
+    setTimeout(() => { if (popupValid.setIsPopupValidOpen) { popupValid.setIsPopupValidOpen(false) } }, 2000);
+  }
+
   return (
     <article className='exchange-buy'>
       <div className='exchange-buy__all-ways'>
@@ -148,9 +177,9 @@ function ExchangeBuy({
                 value={sendValue}
                 inputName={sendValueInputName}
                 fieldName='You Send'
-                handleChange={handleChangeSendValue}
-                minLength={null}
-                maxLength={null}
+                handleChange={handleChangeInputSend}
+                minLength={2}
+                maxLength={5}
                 type='number'
               >
                 <ChangeButton
@@ -183,7 +212,7 @@ function ExchangeBuy({
               <div className='exchange-buy__information-container'>
                 <div className='exchange-buy__information-info'>
                   <p className='exchange-buy__information-value'>Curren rate</p>
-                  <p className='exchange-buy__information-value'>1 {sendCrypto.alt} = {(resulValue / (sendValue > 0 ? sendValue : 1)).toFixed(4)} {resultingCrypto.alt}</p>
+                  <p className='exchange-buy__information-value'>1 {sendCrypto.alt} = {(resulValue / (sendValue > 0 ? sendValue : 1)).toFixed(5)} {resultingCrypto.alt}</p>
                 </div>
                 <div className='exchange-buy__information-info'>
                   <p className='exchange-buy__information-value'>Exchange Fee</p>
@@ -195,11 +224,13 @@ function ExchangeBuy({
                 </div>
                 <div className='exchange-buy__information-info'>
                   <p className='exchange-buy__information-value'>Processing Time</p>
-                  <p className='exchange-buy__information-value'>12-16 Minutes</p>
+                  <p className='exchange-buy__information-value'>{resultingCrypto.time[sendCrypto.alt]} Minutes</p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Destination Adress */}
           <div className='exchange-buy__destination-adress'>
             <Field
               className={'field__input_big field__input_width-plus'}
@@ -207,9 +238,9 @@ function ExchangeBuy({
               inputName={'adress'}
               fieldName='Destination Adress'
               value={values.adress}
-              handleChange={handleChange}
-              minLength={null}
-              maxLength={null}
+              handleChange={handleChangeInputAdress}
+              minLength={30}
+              maxLength={35}
               type='text'
               readOnly={false}
             >
