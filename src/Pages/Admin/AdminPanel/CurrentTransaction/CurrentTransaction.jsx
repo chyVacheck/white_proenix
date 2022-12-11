@@ -3,9 +3,10 @@
 import './CurrentTransaction.css';
 //* react
 import { useState, useEffect } from 'react';
-//? константы
-import { images } from '../../../../utils/constants';
+//? компоненты
 import { ButtonCopied } from '../../../../components/Components';
+//? константы
+import { images, CryptoContent } from '../../../../utils/constants';
 
 function CurrentTransaction(props) {
 
@@ -123,17 +124,18 @@ function CurrentTransaction(props) {
         remainedTimeSec = remainedTimeSec - 60 * Math.floor(remainedTimeSec / 60);
         let time_sec = remainedTimeSec;
 
-
         return (
           <article key={index} className='currentTransaction'>
             {/* name - time */}
             <div className='currentTransaction__text-status'>
+              {/* name */}
               <p className='currentTransaction__text'>{item.nameSend} / {item.nameRes}</p>
-              {/* link */}
+              <p className='currentTransaction__text'>{CryptoContent[item.nameSend].time[item.nameRes]} m</p>
+              {/* time */}
               <div className='currentTransaction__text'>
                 {time_hour !== 0 ? (time_hour < 10 ? '0' + time_hour : time_hour) + ' h : ' : (undefined)}
                 {time_min !== 0 ? (time_min < 10 ? '0' + time_min : time_min) + ' m : ' : (undefined)}
-                {time_sec !== 0 ? (time_sec < 10 ? '0' + time_sec : time_sec) + ' s' : (undefined)}
+                {time_sec < 10 ? '0' + time_sec : time_sec} s
               </div>
             </div>
 
