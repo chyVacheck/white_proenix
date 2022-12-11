@@ -45,7 +45,7 @@ function Field({
         readOnly={readOnly}
         step={1}
         min={10}
-        max={null}
+        max={20000}
       />
       {children}
     </article>
