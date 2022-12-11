@@ -88,6 +88,14 @@ const CryptoContent = {
     name: 'Bitcoin',
     fullName: 'Bitcoin',
     addres: 'bc1q6r2qmmp5g7prthvu4kemhnt5thhaxfp4qpj79g',
+    time: {
+      "ETH": '30-50',
+      "USDT": '35 - 40 ',
+      "MATIC": '30 - 40 ',
+      "NEXO": '25 - 35 ',
+      "BNB": '40 - 60 ',
+      "TRX": '25 - 30',
+    },
   },
   'BNB': {
     img: imagePopupCryptoBNB,
@@ -96,6 +104,14 @@ const CryptoContent = {
     name: 'Binance Coin',
     fullName: 'Binance USD',
     addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    time: {
+      "BTC": '40 - 60',
+      "ETH": '40 - 60',
+      "USDT": '25 - 40',
+      "MATIC": '30 - 45',
+      "NEXO": '34 - 55',
+      "TRX": '25 - 30',
+    },
   },
   'ETH': {
     img: imagePopupCryptoETH,
@@ -104,6 +120,14 @@ const CryptoContent = {
     name: 'Ethereum',
     fullName: 'Etherium',
     addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    time: {
+      "BTC": '30 - 50',
+      "USDT": '20 - 35',
+      "MATIC": '25 - 40',
+      "NEXO": '25 - 40',
+      "BNB": '40 - 60 ',
+      "TRX": '20 - 35',
+    },
   },
   'MATIC': {
     img: imagePopupCryptoMATIC,
@@ -112,14 +136,30 @@ const CryptoContent = {
     name: 'Polygon',
     fullName: 'Matic',
     addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    time: {
+      "BTC": '24 - 30',
+      "ETH": '18 - 23',
+      "USDT": '15 - 20',
+      "NEXO": '14 - 21',
+      "BNB": '30 - 45',
+      "TRX": '17 - 20',
+    },
   },
   'NEXO': {
     img: imagePopupCryptoNEXO,
     img_g: imagePopupCryptoNEXOG,
     alt: 'NEXO',
-    name: '',
+    name: 'Nexo',
     fullName: 'Nexo',
     addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    time: {
+      "BTC": '25 - 35',
+      "ETH": '25 - 40',
+      "USDT": '15 - 20',
+      "MATIC": '20 - 30',
+      "BNB": '34 - 55',
+      "TRX": '17 - 25',
+    },
   },
   'TRX': {
     img: imagePopupCryptoTRX,
@@ -128,6 +168,14 @@ const CryptoContent = {
     name: 'TRON',
     fullName: 'TRON',
     addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
+    time: {
+      "BTC": '25 - 30',
+      "ETH": '20 - 35',
+      "USDT": '10 - 15',
+      "MATIC": '17 - 20',
+      "NEXO": '17 - 25',
+      "BNB": '25 - 30',
+    },
   },
   'USDT': {
     img: imagePopupCryptoUSDT,
@@ -136,6 +184,14 @@ const CryptoContent = {
     name: 'Tether USD',
     fullName: 'Tether USD',
     addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
+    time: {
+      "BTC": '20 - 35',
+      "ETH": '25 - 40',
+      "MATIC": '17 - 20',
+      "NEXO": '15 - 20',
+      "BNB": '25 - 40',
+      "TRX": '10 - 15',
+    },
   }
 }
 
