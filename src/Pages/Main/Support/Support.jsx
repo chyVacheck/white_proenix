@@ -14,8 +14,7 @@ function Support({ popupValid }) {
     <article className='support'>
       <div className='support__container'>
         <p className='support__messanger'>
-          Please write
-          <ButtonCopied popupValid={popupValid} text={EMAIL_OF_SITE} className='support__messanger support__messanger_link link'>
+          Please write <ButtonCopied popupValid={popupValid} text={EMAIL_OF_SITE} className='support__messanger support__messanger_link link'>
             {EMAIL_OF_SITE}
           </ButtonCopied>
         </p>
