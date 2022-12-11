@@ -9,6 +9,16 @@ function SiteVersionHistory() {
   const listChanges = [
     [
       {
+        v: 0.12,
+        date: '11.12.2022'
+      },
+      [
+        { name: 'Fix', list: ['code Support.js', 'make a field check', 'remove unnecessary condition'] },
+        { name: 'Add', list: ['New info to history', 'Field.js max number', 'field restrictions'] },
+      ]
+    ],
+    [
+      {
         v: 0.11,
         date: '11.12.2022'
       },
