@@ -4,6 +4,7 @@ import './Field.css';
 
 function Field({
   className,
+  pattern,
   readOnly = false,
   isPlaceholder = true,
   inputName,
@@ -30,6 +31,7 @@ function Field({
 
       {/* input */}
       <input
+        pattern={pattern}
         noValidate={noValidate}
         value={value || ''}
         onChange={handleChange}
