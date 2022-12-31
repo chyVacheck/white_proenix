@@ -34,12 +34,15 @@ export function setCustomError(input) {
     errorMesage = errorMesages.rangeOverflow;
   }
 
+  if (validity.patternMismatch) {
+    errorMesage = errorMesages.patternMismatch;
+  }
+
   input.setCustomValidity(Error = errorMesage)
   return errorMesage;
 }
 
-export function handleInput(event, popupValid) {
-  const input = event.target;
+export function handleInput(input, popupValid) {
   const validity = input.validity;
 
   const errorMessage = setCustomError(input);
@@ -53,6 +56,4 @@ export function handleInput(event, popupValid) {
     popupValid.setAltPopupValid(images.alt.complete);
     popupValid.setMessagePopupValid(inputIsCorrect);
   }
-
-  popupValid.setIsPopupValidOpen(true);
 }
