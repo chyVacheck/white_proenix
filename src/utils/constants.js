@@ -87,7 +87,7 @@ const CryptoContent = {
     alt: 'BTC',
     name: 'Bitcoin',
     fullName: 'Bitcoin',
-    addres: 'bc1q6r2qmmp5g7prthvu4kemhnt5thhaxfp4qpj79g',
+    addres: '1PRqUDhUnNUhWDdpoexXK6DCVWGS8sE6CX',
     time: {
       "ETH": '30-50',
       "USDT": '35 - 40 ',
@@ -103,7 +103,7 @@ const CryptoContent = {
     alt: 'BNB',
     name: 'Binance Coin',
     fullName: 'Binance USD',
-    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    addres: '0xb1c7e657bd07e6e03b559fa4f2598a1eda28fabb',
     time: {
       "BTC": '40 - 60',
       "ETH": '40 - 60',
@@ -119,7 +119,7 @@ const CryptoContent = {
     alt: 'ETH',
     name: 'Ethereum',
     fullName: 'Etherium',
-    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    addres: '0xb1c7e657bd07e6e03b559fa4f2598a1eda28fabb',
     time: {
       "BTC": '30 - 50',
       "USDT": '20 - 35',
@@ -135,7 +135,7 @@ const CryptoContent = {
     alt: 'MATIC',
     name: 'Polygon',
     fullName: 'Matic',
-    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    addres: '0xb1c7e657bd07e6e03b559fa4f2598a1eda28fabb',
     time: {
       "BTC": '24 - 30',
       "ETH": '18 - 23',
@@ -151,7 +151,7 @@ const CryptoContent = {
     alt: 'NEXO',
     name: 'Nexo',
     fullName: 'Nexo',
-    addres: '0xb9522DEa819F2CCdEF2D7b3CdCAE56c782E724b3',
+    addres: '0xb1c7e657bd07e6e03b559fa4f2598a1eda28fabb',
     time: {
       "BTC": '25 - 35',
       "ETH": '25 - 40',
@@ -167,7 +167,7 @@ const CryptoContent = {
     alt: 'TRX',
     name: 'TRON',
     fullName: 'TRON',
-    addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
+    addres: 'TATAKURFYvgioygh937P4Puc2LT3ziSZAT',
     time: {
       "BTC": '25 - 30',
       "ETH": '20 - 35',
@@ -183,7 +183,7 @@ const CryptoContent = {
     alt: 'USDT',
     name: 'Tether USD',
     fullName: 'Tether USD',
-    addres: 'TVsnofjGQAVoyojTtudAda9eqi22QQAres',
+    addres: 'TATAKURFYvgioygh937P4Puc2LT3ziSZAT',
     time: {
       "BTC": '20 - 35',
       "ETH": '25 - 40',
@@ -195,17 +195,30 @@ const CryptoContent = {
   }
 }
 
+export const URLServerData = 'api/v1/';
+export const consoleMessage = {
+  "PUT": 'to replace',
+  "GET": 'to get',
+  "PATCH": 'to patch',
+  "POST": 'to add new one',
+  "DELETE": 'to delete',
+}
+export const ADRESS_CRYPTO = 'https://min-api.cryptocompare.com/data/';
 export const ADMIN_PASSWORD = '';
 export const EMAIL_OF_SITE = 'white_phoenix@phoenixw.com';
+export const cheapСurrenciesSend = ['MATIC', 'NEXO', 'TRX'];
+export const cheapСurrenciesRes = ['USDT'];
+export const percentageForCheapestCurrencies = 1.0305;
 
 export const errorMesages = {
   tooShort: 'Input is too short',
   tooLong: 'Input is too long',
   typeMismatchUrl: 'Enter the link to the image',
-  valueMissing: 'It remains to fill in',
+  valueMissing: 'The input must be filled in',
   rangeUnderflow: 'You need to enter a number greater than now',
   rangeOverflow: 'You need to enter a number less than now',
   typeMismatchEmail: 'You need to enter the email',
+  patternMismatch: 'You need to enter English characters or numbers',
 }
 
 export const formLogin = {
