@@ -16,7 +16,7 @@ function ButtonCopied({ popupValid, text, className, message = 'Copied', childre
   }
 
   return (
-    <button onClick={onClick} className={'buttonCopied ' + className}>
+    <button onClick={onClick} type='button' className={'buttonCopied ' + className}>
       {children}
     </button>
   )
