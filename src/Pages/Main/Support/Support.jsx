@@ -19,11 +19,13 @@ function Support({ popupValid }) {
           </ButtonCopied>
         </p>
         <p className='support__messanger'>
-          Or write to us in a <NavLink
+          Or write to us in a <a
+            target="_blank"
+            rel="noreferrer"
             className='support__messanger support__messanger_link link'
-            to={'https://web.telegram.org/k/'}>
+            href={'https://web.telegram.org/k/'}>
             telegram
-          </NavLink>
+          </a>
         </p>
       </div>
     </article>
