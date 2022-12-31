@@ -7,6 +7,25 @@
   align-items: center;
 }
 
+.support::before {
+  content: "";
+  width: 437.94px;
+  height: 677.04px;
+  z-index: 0;
+  position: absolute;
+  background: radial-gradient(
+      34.08% 34.22% at 66% 27.65%,
+      #7c75ff 0%,
+      rgba(72, 78, 183, 0) 100%,
+      rgba(159, 167, 255, 0) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  mix-blend-mode: color-dodge;
+  filter: blur(243.372px);
+  border-radius: 973.486px;
+  transform: matrix(0.39, -0.88, -0.99, -0.31, 0, 0);
+}
+
 .support__container {
   background: #121212;
   border-radius: 25px;
