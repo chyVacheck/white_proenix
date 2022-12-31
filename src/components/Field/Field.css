@@ -40,6 +40,10 @@
   border: green 1px solid;
 }
 
+.field__input:invalid {
+  border: red 1px solid;
+}
+
 .field__input_big {
   height: 60px;
 }
